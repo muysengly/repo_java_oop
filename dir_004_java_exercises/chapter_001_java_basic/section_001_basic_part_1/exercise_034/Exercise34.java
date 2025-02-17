@@ -3,13 +3,13 @@ import java.util.Scanner;
 public class Exercise34 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        
+
         // Prompt the user to input the length of a side of the hexagon
         System.out.print("Input the length of a side of the hexagon: ");
-        
+
         // Read the length of a side from the user
         double s = input.nextDouble();
-        
+
         // Calculate and display the area of the hexagon
         System.out.print("The area of the hexagon is: " + hexagonArea(s) + "\n");
     }

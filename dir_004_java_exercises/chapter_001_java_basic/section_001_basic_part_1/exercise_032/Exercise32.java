@@ -30,4 +30,3 @@ public class Exercise32 {
             System.out.printf("%d >= %d\n", number1, number2);
     }
 }
-  

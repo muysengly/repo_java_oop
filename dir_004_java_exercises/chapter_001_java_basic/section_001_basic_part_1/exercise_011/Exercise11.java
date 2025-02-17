@@ -2,6 +2,11 @@ public class Exercise11 {
     // Define a constant for the radius of the circle
     private static final double radius = 7.5;
 
+    // private: only accessible within the class
+    // static: belongs to the class, not an instance of the class
+    // final: cannot be changed after initialization
+    // double: data type for floating-point numbers
+
     public static void main(String[] args) {
         // Calculate the perimeter of the circle using the constant radius
         double perimeter = 2 * Math.PI * radius;
