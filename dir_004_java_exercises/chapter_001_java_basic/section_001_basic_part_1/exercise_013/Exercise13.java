@@ -1,5 +1,6 @@
 public class Exercise13 {
     public static void main(String[] strings) {
+
         // Define constants for the width and height of the rectangle
         final double width = 5.6;
         final double height = 8.5;
