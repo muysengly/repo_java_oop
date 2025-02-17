@@ -1,0 +1,19 @@
+/*styles.css*/
+
+.custom-toggle-button {
+    -fx-background-color: #DDDDDD;
+    /* Default button color */
+    -fx-font-size: 14px;
+    -fx-padding: 8px 12px;
+}
+
+.custom-toggle-button:selected {
+    -fx-background-color: #1E90FF;
+    /* Selected button color */
+    -fx-text-fill: white;
+    /* Text color when selected */
+    -fx-border-color: #1E90FF;
+    /* Border color when selected */
+    -fx-border-radius: 5px;
+    /* Rounded corners */
+}

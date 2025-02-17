@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewController">
+   <children>
+      <Button fx:id="button1" layoutX="225.0" layoutY="268.0" mnemonicParsing="false" onAction="#button1action" text="Button_1" />
+      <Button fx:id="button2" layoutX="333.0" layoutY="268.0" mnemonicParsing="false" onAction="#button2action" text="Button_2" />
+      <Text fx:id="text1" layoutX="131.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text_1" wrappingWidth="137.33673095703125" />
+      <Text fx:id="text2" layoutX="341.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text_2" wrappingWidth="137.33673095703125" />
+   </children>
+</Pane>

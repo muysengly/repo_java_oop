@@ -1,0 +1,9 @@
+/*styles.css*/
+.form-field .text-field {
+    -fx-border-color: #4CAF50;
+    /* Green border */
+    -fx-background-color: #f2f2f2;
+    /* Light gray background */
+    -fx-text-fill: #333333;
+    /* Dark text color */
+}

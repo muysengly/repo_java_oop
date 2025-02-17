@@ -1,0 +1,15 @@
+/* styles.css */
+
+/* Styling for the button */
+#animated-button {
+    -fx-background-color: #1E90FF; /* Initial background color */
+    -fx-text-fill: white; /* Text color */
+    -fx-padding: 10px 20px; /* Padding */
+    -fx-font-size: 14px; /* Font size */
+    -fx-transition: -fx-background-color 0.3s; /* Transition effect for background color */
+}
+
+/* Animation on hover */
+#animated-button:hover {
+    -fx-background-color: #FF6347; /* Background color change on hover */
+}

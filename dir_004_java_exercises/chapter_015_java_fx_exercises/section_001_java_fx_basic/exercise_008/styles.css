@@ -1,0 +1,13 @@
+.styled-label {
+    -fx-font-size: 20px;
+    -fx-text-fill: blue;
+}
+
+.styled-button {
+    -fx-font-size: 16px;
+    -fx-background-color: pink;
+    -fx-text-fill: red;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-pref-width: 150px;
+}

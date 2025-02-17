@@ -1,0 +1,14 @@
+
+------Auto Insurance policy------
+Name: John Doe
+Age: 30
+Coverage: 15000
+Car Age: 2
+Yearly cost: 740.0
+>>>Car age: 2
+
+------Life Insurance policy------
+Name: John Doe
+Age: 30
+Coverage: 1000000
+Yearly cost: 1300.0

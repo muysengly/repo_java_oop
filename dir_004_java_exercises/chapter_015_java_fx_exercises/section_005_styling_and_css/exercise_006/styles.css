@@ -1,0 +1,11 @@
+/* styles.css */
+
+/* Styling for the button with class 'styled-button' */
+.styled-button {
+    -fx-font-size: 14px;
+    -fx-padding: 8px 12px;
+    -fx-background-color: #1E90FF;
+    -fx-text-fill: white;
+    -fx-border-color: #1E90FF;
+    -fx-border-radius: 5px;
+}

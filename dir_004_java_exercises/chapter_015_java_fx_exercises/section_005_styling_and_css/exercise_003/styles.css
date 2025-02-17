@@ -1,0 +1,12 @@
+/*styles.css*/
+#custom-label {
+    -fx-font-family: "Arial";
+    -fx-font-size: 18px;
+    -fx-text-fill: #1E90FF; /* Blue text color */
+    -fx-alignment: center;
+}
+
+.label-container {
+    -fx-background-color: #f2f2f2; /* Light gray background */
+    -fx-padding: 10px;
+}

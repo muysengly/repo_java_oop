@@ -1,0 +1,12 @@
+/* styles.css */
+
+/* Styling for the button when hovered */
+#hover-button:hover {
+    -fx-background-color: #FF6347; /* Change background color on hover */
+    -fx-text-fill: white; /* Change text color on hover */
+}
+/* Styling for the button when focused */
+#focused-button:focused {
+    -fx-background-color: #1E90FF; /* Change background color when focused */
+    -fx-text-fill: white; /* Change text color when focused */
+}
