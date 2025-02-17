@@ -8,6 +8,4 @@ javafx_sdk/
 
 .gitignore
 
-__readme.ipynb
-
 __renamer.ipynb
