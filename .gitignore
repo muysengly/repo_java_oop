@@ -5,3 +5,5 @@ javafx_sdk/
 .gitignore
 __renamer.ipynb
 __application__/
+dir_005_my_example/
+dir_005_my_demo/
