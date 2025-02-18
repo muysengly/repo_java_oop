@@ -8,3 +8,6 @@ __application__/
 dir_005_my_example/
 dir_005_my_demo/
 lib/
+__create_dir__.ipynb
+__renamer__.ipynb
+__readme__.ipynb
