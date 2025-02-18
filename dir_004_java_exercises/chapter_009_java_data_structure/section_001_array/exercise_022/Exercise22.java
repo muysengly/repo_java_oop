@@ -1,6 +1,7 @@
 // Define a class named Exercise22.
 public class Exercise22 {
-    // Create a static method named pairs_value that takes an integer array and an input number.
+    // Create a static method named pairs_value that takes an integer array and an
+    // input number.
     static void pairs_value(int inputArray[], int inputNumber) {
         System.out.println("Pairs of elements and their sum : ");
 
@@ -20,9 +21,9 @@ public class Exercise22 {
     // The main method for executing the program.
     public static void main(String[] args) {
         // Call the pairs_value method with a sample array and input number.
-        pairs_value(new int[]{2, 7, 4, -5, 11, 5, 20}, 15);
+        pairs_value(new int[] { 2, 7, 4, -5, 11, 5, 20 }, 15);
 
         // Call the pairs_value method with another sample array and input number.
-        pairs_value(new int[]{14, -15, 9, 16, 25, 45, 12, 8}, 30);
+        pairs_value(new int[] { 14, -15, 9, 16, 25, 45, 12, 8 }, 30);
     }
 }

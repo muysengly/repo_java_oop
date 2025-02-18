@@ -25,7 +25,7 @@ public class Main {
                 + ", month: " + localDate.getMonthValue() + ", day: " + localDate.getDayOfMonth() + " )");
 
         LocalTime localTime = LocalTime.parse("12:23:44");
-    	System.out.println("\nConvert LocalTime to String:");
+        System.out.println("\nConvert LocalTime to String:");
         String localTimeAsDefaultString = localTime.toString();
         System.out.println("LocalTime: " + localTimeAsDefaultString + "( hour: " + localTime.getHour()
                 + ", minute: " + localTime.getMinute() + ", second: " + localTime.getSecond() + " )");
@@ -71,15 +71,16 @@ public class Main {
         DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
         System.out.println("Convert String to LocalDate:");
         LocalDate localDateFormatted = LocalDate.parse("01.06.2020", dateFormatter);
-        System.out.println("Convert LocalDate to String:");              
+        System.out.println("Convert LocalDate to String:");
         String localDateAsFormattedString = dateFormatter.format(localDateFormatted);
         System.out.println("Date: " + localDateAsFormattedString + "( year: " + localDateFormatted.getYear()
-                + ", month: " + localDateFormatted.getMonthValue() + ", day: " + localDateFormatted.getDayOfMonth() + " )");
+                + ", month: " + localDateFormatted.getMonthValue() + ", day: " + localDateFormatted.getDayOfMonth()
+                + " )");
 
         DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH|mm|ss");
         System.out.println("Convert String to LocalTime:");
         LocalTime localTimeFormatted = LocalTime.parse("12|23|44", timeFormatter);
-        System.out.println("Convert LocalTime to String:");              
+        System.out.println("Convert LocalTime to String:");
         String localTimeAsFormattedString = timeFormatter.format(localTimeFormatted);
         System.out.println("Time: " + localTimeAsFormattedString + "( hour: " + localTimeFormatted.getHour()
                 + ", minute: " + localTimeFormatted.getMinute() + ", second: " + localTimeFormatted.getSecond() + " )");
@@ -87,22 +88,27 @@ public class Main {
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy, HH:mm:ss");
         System.out.println("Convert String to LocalDateTime:");
         LocalDateTime localDateTimeFormatted = LocalDateTime.parse("01.06.2020, 11:20:15", dateTimeFormatter);
-        System.out.println("Convert LocalDateTime to String:");        
+        System.out.println("Convert LocalDateTime to String:");
         String localDateTimeAsFormattedString = dateTimeFormatter.format(localDateTimeFormatted);
         System.out.println("DateTime: " + localDateTimeAsFormattedString + "( year: " + localDateTimeFormatted.getYear()
-                + ", month: " + localDateTimeFormatted.getMonthValue() + ", day: " + localDateTimeFormatted.getDayOfMonth()
+                + ", month: " + localDateTimeFormatted.getMonthValue() + ", day: "
+                + localDateTimeFormatted.getDayOfMonth()
                 + ", hour: " + localDateTimeFormatted.getHour() + ", minute: " + localDateTimeFormatted.getMinute()
                 + ", second: " + localDateTimeFormatted.getSecond() + " )");
 
         DateTimeFormatter offsetDateTimeFormatter = DateTimeFormatter.ofPattern("yyyy.MM.dd, HH:mm:ss, XXXXX");
         System.out.println("Convert String to OffsetDateTime:");
-        OffsetDateTime offsetDateTimeFormatted = OffsetDateTime.parse("2007.12.03, 10:15:30, +01:00", offsetDateTimeFormatter);
-        System.out.println("Convert OffsetDateTime to String:");        
+        OffsetDateTime offsetDateTimeFormatted = OffsetDateTime.parse("2007.12.03, 10:15:30, +01:00",
+                offsetDateTimeFormatter);
+        System.out.println("Convert OffsetDateTime to String:");
         String offsetDateTimeAsFormattedString = offsetDateTimeFormatter.format(offsetDateTimeFormatted);
-        System.out.println("OffsetDateTime: " + offsetDateTimeAsFormattedString + "( year: " + offsetDateTimeFormatted.getYear()
-                + ", month: " + offsetDateTimeFormatted.getMonthValue() + ", day: " + offsetDateTimeFormatted.getDayOfMonth()
+        System.out.println("OffsetDateTime: " + offsetDateTimeAsFormattedString + "( year: "
+                + offsetDateTimeFormatted.getYear()
+                + ", month: " + offsetDateTimeFormatted.getMonthValue() + ", day: "
+                + offsetDateTimeFormatted.getDayOfMonth()
                 + ", hour: " + offsetDateTimeFormatted.getHour() + ", minute: " + offsetDateTimeFormatted.getMinute()
-                + ", second: " + offsetDateTimeFormatted.getSecond() + ", offset: " + offsetDateTimeFormatted.getOffset() + " )");
+                + ", second: " + offsetDateTimeFormatted.getSecond() + ", offset: "
+                + offsetDateTimeFormatted.getOffset() + " )");
 
         DateTimeFormatter offsetTimeFormatter = DateTimeFormatter.ofPattern("HH mm ss XXXXX");
         System.out.println("Convert String to OffsetTime:");
@@ -111,19 +117,22 @@ public class Main {
         String offsetTimeAsFormattedString = offsetTimeFormatter.format(offsetTimeFormatted);
         System.out.println("OffsetTime: " + offsetTimeAsFormattedString
                 + "( hour: " + offsetTimeFormatted.getHour() + ", minute: " + offsetTimeFormatted.getMinute()
-                + ", second: " + offsetTimeFormatted.getSecond() + ", offset: " + offsetTimeFormatted.getOffset() + " )");
+                + ", second: " + offsetTimeFormatted.getSecond() + ", offset: " + offsetTimeFormatted.getOffset()
+                + " )");
 
-        DateTimeFormatter zonedDateTimeFormatter
-                = DateTimeFormatter.ofPattern("dd.MM.yyyy, HH:mm:ssXXXXX '['VV']'");
-        // DateTimeFormatter zonedDateTimeFormatter 
-        //      = DateTimeFormatter.ofPattern("dd.MM.yyyy, HH:mm:ssXXXXX '['VV']'").withZone(ZoneId.of("Europe/Paris"));        
-        System.out.println("Convert String to ZonedDateTime:");                 
-        ZonedDateTime zonedDateTimeFormatted
-                = ZonedDateTime.parse("01.06.2020, 11:20:15+09:00 [Asia/Tokyo]", zonedDateTimeFormatter);
+        DateTimeFormatter zonedDateTimeFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy, HH:mm:ssXXXXX '['VV']'");
+        // DateTimeFormatter zonedDateTimeFormatter
+        // = DateTimeFormatter.ofPattern("dd.MM.yyyy, HH:mm:ssXXXXX
+        // '['VV']'").withZone(ZoneId.of("Europe/Paris"));
+        System.out.println("Convert String to ZonedDateTime:");
+        ZonedDateTime zonedDateTimeFormatted = ZonedDateTime.parse("01.06.2020, 11:20:15+09:00 [Asia/Tokyo]",
+                zonedDateTimeFormatter);
         System.out.println("Convert ZonedDateTime to String:");
         String zonedDateTimeAsFormattedString = zonedDateTimeFormatted.format(zonedDateTimeFormatter);
-        System.out.println("ZonedDateTime: " + zonedDateTimeAsFormattedString + "( year: " + zonedDateTimeFormatted.getYear()
-                + ", month: " + zonedDateTimeFormatted.getMonthValue() + ", day: " + zonedDateTimeFormatted.getDayOfMonth()
+        System.out.println("ZonedDateTime: " + zonedDateTimeAsFormattedString + "( year: "
+                + zonedDateTimeFormatted.getYear()
+                + ", month: " + zonedDateTimeFormatted.getMonthValue() + ", day: "
+                + zonedDateTimeFormatted.getDayOfMonth()
                 + ", hour: " + zonedDateTimeFormatted.getHour() + ", minute: " + zonedDateTimeFormatted.getMinute()
                 + ", second: " + zonedDateTimeFormatted.getSecond() + ", offset: " + zonedDateTimeFormatted.getOffset()
                 + ", zone: " + zonedDateTimeFormatted.getZone() + " )");

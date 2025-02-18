@@ -1,6 +1,7 @@
 // Define a class named Exercise23.
 public class Exercise23 {
-    // Create a static method named equality_checking_two_arrays that takes two integer arrays.
+    // Create a static method named equality_checking_two_arrays that takes two
+    // integer arrays.
     static void equality_checking_two_arrays(int[] my_array1, int[] my_array2) {
         // Initialize a boolean variable to indicate whether the arrays are equal.
         boolean equalOrNot = true;
@@ -30,9 +31,9 @@ public class Exercise23 {
     // The main method for executing the program.
     public static void main(String[] args) {
         // Define three integer arrays for comparison.
-        int[] array1 = {2, 5, 7, 9, 11};
-        int[] array2 = {2, 5, 7, 8, 11};
-        int[] array3 = {2, 5, 7, 9, 11};
+        int[] array1 = { 2, 5, 7, 9, 11 };
+        int[] array2 = { 2, 5, 7, 8, 11 };
+        int[] array3 = { 2, 5, 7, 9, 11 };
 
         // Call the equality_checking_two_arrays method to compare array1 and array2.
         equality_checking_two_arrays(array1, array2);

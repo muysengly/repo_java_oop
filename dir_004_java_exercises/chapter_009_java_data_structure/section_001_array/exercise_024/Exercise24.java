@@ -1,3 +1,4 @@
+
 // Import the java.util package to use utility classes, including Scanner.
 import java.util.*;
 
@@ -7,7 +8,7 @@ public class Exercise24 {
     public static void main(String[] args) {
         // Declare variables for total number and an array of integers.
         int total_num;
-        int[] numbers = new int[]{1, 2, 3, 4, 6, 7};
+        int[] numbers = new int[] { 1, 2, 3, 4, 6, 7 };
 
         // Assign the value 7 to the variable total_num.
         total_num = 7;
@@ -24,7 +25,8 @@ public class Exercise24 {
             num_sum += i;
         }
 
-        // Calculate the missing number by subtracting 'num_sum' from 'expected_num_sum'.
+        // Calculate the missing number by subtracting 'num_sum' from
+        // 'expected_num_sum'.
         System.out.print(expected_num_sum - num_sum);
 
         // Print a newline character to end the line.

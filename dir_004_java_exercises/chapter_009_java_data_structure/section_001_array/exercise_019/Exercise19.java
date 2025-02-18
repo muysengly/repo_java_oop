@@ -1,3 +1,4 @@
+
 // Import the Java utility for reading input.
 import java.util.Scanner;
 
@@ -5,14 +6,14 @@ import java.util.Scanner;
 public class Exercise19 {
     public static void main(String args[]) {
         int m, n, c, d;
-        
+
         // Create a new Scanner object to read user input.
         Scanner in = new Scanner(System.in);
 
         // Prompt the user to input the number of rows for the matrix.
         System.out.println("Input number of rows of the matrix");
         m = in.nextInt();
-        
+
         // Prompt the user to input the number of columns for the matrix.
         System.out.println("Input number of columns of the matrix");
         n = in.nextInt();

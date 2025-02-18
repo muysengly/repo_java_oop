@@ -1,3 +1,4 @@
+
 //MIT License: https://bit.ly/35gZLa3
 import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
@@ -19,8 +20,8 @@ public class Main {
         System.out.println("Offset from TimeZone (Australia/Perth): " + userFriendlyOffsetTimeZone);
 
         Calendar calendar = Calendar.getInstance();
-        // Summer time in Bucharest: 
-        // Sunday, 31 March 2019, 1h forward -  Sunday, 27 October 2019, 1 hour backward
+        // Summer time in Bucharest:
+        // Sunday, 31 March 2019, 1h forward - Sunday, 27 October 2019, 1 hour backward
         // month 6 is a summer month in Bucharest, so you will get +03:00
         // month 11 is a winter month in Bucharest, so you will get +02:00
         calendar.set(2019, 11, 15);
@@ -47,7 +48,7 @@ public class Main {
 
         ZoneOffset zoneOffsetFromString = ZoneOffset.of("+02:00");
         System.out.println("\nZoneOffset from String: " + zoneOffsetFromString);
-        // for example, use it to define an OffsetDateTime or an OffsetTime        
+        // for example, use it to define an OffsetDateTime or an OffsetTime
         OffsetTime offsetTime = OffsetTime.now(zoneOffsetFromString);
         OffsetDateTime offsetDateTime = OffsetDateTime.now(zoneOffsetFromString);
         System.out.println("OffsetTime from ZoneOffset of current date: " + offsetTime);
@@ -74,4 +75,4 @@ public class Main {
 
         return String.format("%+03d:%02d", offsetInHours, offsetInMinutes);
     }
-} 
+}
