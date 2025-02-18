@@ -2,8 +2,12 @@ public class Exercise1 {
     public static void main(String[] args) {
         // Print a greeting message to the console
         System.out.println("Hello\nAlexandra Abramov!");
+
     }
 }
+
+// Print the first argument to the console
+// if(args.length>0){System.err.println(args[0]);}
 
 // public: This keyword is an access modifier that allows the class to be
 // accessed from outside the class.

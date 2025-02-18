@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewController">
+   <children>
+      <CheckBox fx:id="checkBox_001" layoutX="62.0" layoutY="41.0" mnemonicParsing="false" onAction="#checkbox_001_on_action" text="CheckBox" />
+   </children>
+</AnchorPane>
