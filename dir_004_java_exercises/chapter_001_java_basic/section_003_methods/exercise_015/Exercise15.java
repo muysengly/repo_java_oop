@@ -1,7 +1,8 @@
 import java.util.Scanner;
+
 public class Exercise15 {
- 
- public static void main(String[] args) {
+
+    public static void main(String[] args) {
 
         // Obtain the total milliseconds since midnight, Jan 1, 1970
         long totalMilliseconds = System.currentTimeMillis();
@@ -10,28 +11,28 @@ public class Exercise15 {
         long totalSeconds = totalMilliseconds / 1000;
 
         // Compute the current second in the minute in the hour
-        long currentSecond = (int)(totalSeconds % 60);
+        long currentSecond = (int) (totalSeconds % 60);
 
         // Obtain the total minutes
         long totalMinutes = totalSeconds / 60;
 
         // Compute the current minute in the hour
-        long currentMinute = (int)(totalMinutes % 60);
+        long currentMinute = (int) (totalMinutes % 60);
 
         // Obtain the total hours
         long totalHours = totalMinutes / 60;
 
         // Compute the current hour
-        long currentHour = (int)(totalHours % 24);
+        long currentHour = (int) (totalHours % 24);
 
         long totalDays = totalHours / 24;
 
         // current year
-        int currentYear = (int)(totalDays / 365) + 1970;
-
+        int currentYear = (int) (totalDays / 365) + 1970;
 
         long daysInCurrentYear = (totalDays - numberOfLeapYearsSince1970(currentYear)) % 365;
-        if (currentHour > 0) daysInCurrentYear++; // add today
+        if (currentHour > 0)
+            daysInCurrentYear++; // add today
 
         // get current month number
         int currentMonthNum = getMonthFromDays(currentYear, (int) daysInCurrentYear);
@@ -44,26 +45,34 @@ public class Exercise15 {
 
         int startDay = getStartDay(currentYear, currentMonthNum);
         int today = (int) daysInCurrentYear - daysTillCurrentMonth;
-        String dayOfWeek = dayNameOfWeek( ((startDay + today) % 7));
+        String dayOfWeek = dayNameOfWeek(((startDay + today) % 7));
 
         // Display results
-        System.out.println("Current date and time: " + dayOfWeek + " " + month + " " + today +", " + currentYear
-        +" " + currentHour + ":"
-                + currentMinute + ":" + currentSecond );
+        System.out.println("Current date and time: " + dayOfWeek + " " + month + " " + today + ", " + currentYear
+                + " " + currentHour + ":"
+                + currentMinute + ":" + currentSecond);
 
     }
 
     public static String dayNameOfWeek(int dayOfWeek) {
 
         switch (dayOfWeek) {
-            case 2: return "Monday";
-            case 3: return "Tuesday";
-            case 4: return "Wednesday";
-            case 5: return "Thursday";
-            case 6: return "Friday";
-            case 7: return "Saturday";
-            case 1: return "Sunday";
-            default: return null;
+            case 2:
+                return "Monday";
+            case 3:
+                return "Tuesday";
+            case 4:
+                return "Wednesday";
+            case 5:
+                return "Thursday";
+            case 6:
+                return "Friday";
+            case 7:
+                return "Saturday";
+            case 1:
+                return "Sunday";
+            default:
+                return null;
         }
     }
 
@@ -71,11 +80,11 @@ public class Exercise15 {
 
         int count = 0;
         for (int i = 1970; i <= year; i++) {
-            if (isLeapYear(i))count++;
+            if (isLeapYear(i))
+                count++;
         }
         return count;
     }
-
 
     public static int getMonthFromDays(int year, int days) {
         int dayTracker = 0;
@@ -83,7 +92,8 @@ public class Exercise15 {
 
             dayTracker += getNumberOfDaysInMonth(year, i);
 
-            if (dayTracker > days) return i;
+            if (dayTracker > days)
+                return i;
         }
         return 12;
     }
@@ -93,7 +103,6 @@ public class Exercise15 {
         for (int i = 1; i < month; i++) {
 
             dayTracker += getNumberOfDaysInMonth(year, i);
-
 
         }
         return dayTracker;
@@ -137,7 +146,8 @@ public class Exercise15 {
         if (month == 4 || month == 6 || month == 9 || month == 11)
             return 30;
 
-        if (month == 2) return isLeapYear(year) ? 29 : 28;
+        if (month == 2)
+            return isLeapYear(year) ? 29 : 28;
 
         return 0; // If month is incorrect
     }
@@ -147,23 +157,45 @@ public class Exercise15 {
         return year % 400 == 0 || (year % 4 == 0 && year % 100 != 0);
     }
 
-
     /** Get the English name for the month 1-12 */
     public static String getMonthName(int month) {
         String monthName = "";
         switch (month) {
-            case 1: monthName = "January"; break;
-            case 2: monthName = "February"; break;
-            case 3: monthName = "March"; break;
-            case 4: monthName = "April"; break;
-            case 5: monthName = "May"; break;
-            case 6: monthName = "June"; break;
-            case 7: monthName = "July"; break;
-            case 8: monthName = "August"; break;
-            case 9: monthName = "September"; break;
-            case 10: monthName = "October"; break;
-            case 11: monthName = "November"; break;
-            case 12: monthName = "December";
+            case 1:
+                monthName = "January";
+                break;
+            case 2:
+                monthName = "February";
+                break;
+            case 3:
+                monthName = "March";
+                break;
+            case 4:
+                monthName = "April";
+                break;
+            case 5:
+                monthName = "May";
+                break;
+            case 6:
+                monthName = "June";
+                break;
+            case 7:
+                monthName = "July";
+                break;
+            case 8:
+                monthName = "August";
+                break;
+            case 9:
+                monthName = "September";
+                break;
+            case 10:
+                monthName = "October";
+                break;
+            case 11:
+                monthName = "November";
+                break;
+            case 12:
+                monthName = "December";
         }
 
         return monthName;

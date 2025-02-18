@@ -17,5 +17,8 @@ public class Main { // Declare a class named Main
         // Output a greeting message with the user's full name
         System.out.println(); // Print a newline
         System.out.println("Hello \n" + fname + " " + lname);
+
+        // Close the Scanner object
+
     }
 }
