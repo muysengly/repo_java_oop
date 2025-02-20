@@ -6,7 +6,7 @@ public class Exercise3 {
         System.out.println(result);
 
         // Print the result of dividing 50 by 3 as a floating-point number
-        float result_1 = 50.0f / 3.0f;
+        float result_1 = 50f / 3f;
         System.out.println(result_1);
     }
 }

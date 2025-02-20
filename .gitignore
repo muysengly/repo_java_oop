@@ -3,11 +3,11 @@ javafx_sdk/
 .vscode/
 .git/
 .gitignore
-__renamer.ipynb
-__application__/
 dir_005_my_example/
 dir_005_my_demo/
 lib/
+__renamer.ipynb
+__application__/
 __create_dir__.ipynb
 __renamer__.ipynb
 __readme__.ipynb
