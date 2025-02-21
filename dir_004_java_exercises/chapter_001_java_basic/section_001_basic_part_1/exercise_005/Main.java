@@ -1,4 +1,5 @@
 public class Main { // Declare a public class named Main
+
     // Declare and initialize static variables x and y
     static int x = 25; // Declare a static integer variable 'x' and assign it the value 25
     static int y = 5; // Declare a static integer variable 'y' and assign it the value 5

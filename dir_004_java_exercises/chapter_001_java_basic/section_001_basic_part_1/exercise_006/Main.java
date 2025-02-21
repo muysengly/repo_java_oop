@@ -10,10 +10,10 @@ public class Main {
 
         // Read and store the first number
         int n1 = scanner.nextInt();
-        int n2 = scanner.nextInt();
 
         // Prompt the user to input the second number
         System.out.println("Input the second number: ");
+        int n2 = scanner.nextInt();
 
         // Read and store the second number
 
@@ -38,7 +38,7 @@ public class Main {
 
         // Display the results of the calculations
         System.out.printf(
-                "Sum = %d\nMinus = %d\nMultiply = %d\nSubtract = %d\nDivide = %d\nRemainderOf2Numbers = %d\n ", sum,
-                minus, multiply, subtract, divide, rnums);
+                "Sum = %d\nMinus = %d\nMultiply = %d\nSubtract = %d\nDivide = %d\nRemainderOf2Numbers = %d\n ",
+                sum, minus, multiply, subtract, divide, rnums);
     }
 }
