@@ -17,8 +17,11 @@ public class Main {
         y = in.nextInt();
 
         // Perform the swap using a temporary variable 'z'
+        // Swap the values of x and y
         z = x;
+        // Store the value of y in x
         x = y;
+        // Store the value of z in y
         y = z;
 
         // Display the swapped values
