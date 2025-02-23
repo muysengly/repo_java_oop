@@ -19,7 +19,7 @@ public class Main extends Application {
         primaryStage.setTitle("Image ScrollPane Example");
 
         // Load a large image
-        Image image = new Image("large_image.png"); // Replace with your image file path
+        Image image = new Image("java.png"); // Replace with your image file path
 
         // Create an ImageView to display the image
         ImageView imageView = new ImageView(image);
@@ -27,7 +27,8 @@ public class Main extends Application {
         // Create a ScrollPane to display the image with scrollbars
         ScrollPane scrollPane = new ScrollPane(imageView);
 
-        // Set scroll policy to ensure both horizontal and vertical scrollbars appear as needed
+        // Set scroll policy to ensure both horizontal and vertical scrollbars appear as
+        // needed
         scrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
         scrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
 

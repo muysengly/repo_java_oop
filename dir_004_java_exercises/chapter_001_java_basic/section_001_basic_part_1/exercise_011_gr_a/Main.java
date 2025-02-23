@@ -1,3 +1,4 @@
+package dir_004_java_exercises.chapter_001_java_basic.section_001_basic_part_1.exercise_011_gr_a;
 import java.util.Scanner;
 
 public class Main {

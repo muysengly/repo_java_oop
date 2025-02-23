@@ -24,7 +24,7 @@ public class Main extends Application {
         Label colorLabel = new Label("Selected Color: ");
 
         // Create a ChoiceBox with a list of colors.
-        ChoiceBox<string> colorChoiceBox = new ChoiceBox<>();
+        ChoiceBox<String> colorChoiceBox = new ChoiceBox<>();
         colorChoiceBox.getItems().addAll("Red", "Green", "Blue", "Yellow", "Orange", "Purple");
 
         // Create a rectangle with an initial color.
@@ -74,4 +74,3 @@ public class Main extends Application {
         primaryStage.show();
     }
 }
-</string>

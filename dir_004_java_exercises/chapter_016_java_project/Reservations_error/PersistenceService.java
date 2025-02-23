@@ -10,10 +10,24 @@ public class PersistenceService {
     public PersistenceService() {
         try {
             connection = DriverManager
-                    .getConnection("jdbc:mysql://localhost/test?"
-                            + "user=root&password=root1234");
+                    .getConnection("jdbc:sqlite:database.db");
 
             connection.setAutoCommit(false);
+
+            // create a statement object
+            Statement statement = connection.createStatement();
+
+            // set timeout to 30 sec.
+            statement.setQueryTimeout(30);
+
+            // create table Apartments
+            statement.executeUpdate(
+                    "create table if not exists Apartments (id integer primary key, address string, capacity integer, price integer)");
+
+            // create table Reservations
+            statement.executeUpdate(
+                    "create table if not exists Reservations (id integer primary key, name string, surname string, start_date date, duration integer, cost real)");
+
         } catch (SQLException e) {
             System.out.println("Could not connect to database. Exiting..");
             System.exit(1);

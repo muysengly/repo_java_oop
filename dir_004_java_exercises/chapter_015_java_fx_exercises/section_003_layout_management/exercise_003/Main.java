@@ -30,7 +30,7 @@ public class Main extends Application {
         borderPane.setCenter(centerButton);
 
         // Create a ListView at the bottom
-        ListView<string> listView = new ListView<>();
+        ListView<String> listView = new ListView<>();
         listView.getItems().addAll("Item 1", "Item 2", "Item 3", "Item 4");
         borderPane.setBottom(listView);
 
@@ -42,4 +42,3 @@ public class Main extends Application {
         primaryStage.show();
     }
 }
-</string>

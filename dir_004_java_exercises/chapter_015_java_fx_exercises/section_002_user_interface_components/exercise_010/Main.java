@@ -27,10 +27,14 @@ public class Main extends Application {
         CheckBox yellowCheckBox = new CheckBox("Yellow");
 
         // Handle the action when a CheckBox is clicked.
-        redCheckBox.setOnAction(event -> updateSelectionLabel(selectionLabel, redCheckBox));
-        greenCheckBox.setOnAction(event -> updateSelectionLabel(selectionLabel, greenCheckBox));
-        blueCheckBox.setOnAction(event -> updateSelectionLabel(selectionLabel, blueCheckBox));
-        yellowCheckBox.setOnAction(event -> updateSelectionLabel(selectionLabel, yellowCheckBox));
+        redCheckBox.setOnAction(event -> updateSelectionLabel(selectionLabel, redCheckBox, greenCheckBox, blueCheckBox,
+                yellowCheckBox));
+        greenCheckBox.setOnAction(event -> updateSelectionLabel(selectionLabel, redCheckBox, greenCheckBox,
+                blueCheckBox, yellowCheckBox));
+        blueCheckBox.setOnAction(event -> updateSelectionLabel(selectionLabel, redCheckBox, greenCheckBox, blueCheckBox,
+                yellowCheckBox));
+        yellowCheckBox.setOnAction(event -> updateSelectionLabel(selectionLabel, redCheckBox, greenCheckBox,
+                blueCheckBox, yellowCheckBox));
 
         // Create a layout (VBox) to arrange the CheckBox options and label.
         VBox root = new VBox(10);
@@ -45,10 +49,16 @@ public class Main extends Application {
     }
 
     // Update the label to display the selected options.
-    private void updateSelectionLabel(Label label, CheckBox checkBox) {
+    private void updateSelectionLabel(Label label, CheckBox... checkBoxes) {
         StringBuilder selectedOptions = new StringBuilder("Selected Options: ");
-        if (checkBox.isSelected()) {
-            selectedOptions.append(checkBox.getText()).append(", ");
+        for (CheckBox checkBox : checkBoxes) {
+            if (checkBox.isSelected()) {
+                selectedOptions.append(checkBox.getText()).append(", ");
+            }
+        }
+        // Remove the trailing comma and space if any options are selected
+        if (selectedOptions.length() > 17) {
+            selectedOptions.setLength(selectedOptions.length() - 2);
         }
         label.setText(selectedOptions.toString());
     }

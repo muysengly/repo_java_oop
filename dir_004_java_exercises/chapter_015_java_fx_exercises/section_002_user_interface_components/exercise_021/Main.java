@@ -13,8 +13,8 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-    private ObservableList<string> messages;
-    private ListView<string> messageListView;
+    private ObservableList<String> messages;
+    private ListView<String> messageListView;
     private TextArea messageTextArea;
 
     public static void main(String[] args) {
@@ -49,4 +49,3 @@ public class Main extends Application {
         primaryStage.show();
     }
 }
-</string></string>

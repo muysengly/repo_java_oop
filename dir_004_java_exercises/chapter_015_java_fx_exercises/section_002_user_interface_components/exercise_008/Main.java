@@ -25,13 +25,12 @@ public class Main extends Application {
         Label daysLabel = new Label("Number of Days: ");
 
         // Create a ComboBox with a list of months.
-        ComboBox<string> monthComboBox = new ComboBox<>(FXCollections.observableArrayList(
+        ComboBox<String> monthComboBox = new ComboBox<>(FXCollections.observableArrayList(
                 "January", "February", "March", "April", "May", "June",
-                "July", "August", "September", "October", "November", "December"
-        ));
+                "July", "August", "September", "October", "November", "December"));
 
         // Create a map to store the number of days for each month.
-        Map<string, integer=""> monthDaysMap = new HashMap<>();
+        Map<String, Integer> monthDaysMap = new HashMap<>();
         monthDaysMap.put("January", 31);
         monthDaysMap.put("February", 28);
         monthDaysMap.put("March", 31);
@@ -60,8 +59,7 @@ public class Main extends Application {
         Scene scene = new Scene(root, 300, 200);
         primaryStage.setScene(scene);
 
-        // Set the title of the window.
+        // Show the window.
         primaryStage.show();
     }
 }
-</string,></string>

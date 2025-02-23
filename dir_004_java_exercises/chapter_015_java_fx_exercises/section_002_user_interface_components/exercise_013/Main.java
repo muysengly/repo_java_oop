@@ -21,7 +21,8 @@ public class Main extends Application {
         // Create a label to indicate the selected button.
         Label selectionLabel = new Label("Selected Button: None");
 
-        // Create a ToggleGroup for the ToggleButtons to make them act like radio buttons.
+        // Create a ToggleGroup for the ToggleButtons to make them act like radio
+        // buttons.
         ToggleGroup toggleGroup = new ToggleGroup();
 
         // Create two ToggleButtons.

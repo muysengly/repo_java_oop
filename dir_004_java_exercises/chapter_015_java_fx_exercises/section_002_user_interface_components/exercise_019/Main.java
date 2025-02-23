@@ -29,7 +29,7 @@ public class Main extends Application {
         Button addButton = new Button("Add to List");
 
         // Create a ListView to display entered text.
-        ListView<string> listView = new ListView<>();
+        ListView<String> listView = new ListView<>();
 
         addButton.setOnAction(event -> {
             String enteredText = textArea.getText();
@@ -54,4 +54,3 @@ public class Main extends Application {
         primaryStage.show();
     }
 }
-</string>

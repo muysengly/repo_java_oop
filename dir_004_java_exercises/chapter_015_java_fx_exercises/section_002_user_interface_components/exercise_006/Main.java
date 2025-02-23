@@ -46,7 +46,8 @@ public class Main extends Application {
 
         // Create a layout (VBox) to arrange the elements.
         VBox root = new VBox(10);
-        root.getChildren().addAll(passwordLabel1, passwordField1, passwordLabel2, passwordField2, checkButton, resultLabel);
+        root.getChildren().addAll(passwordLabel1, passwordField1, passwordLabel2, passwordField2, checkButton,
+                resultLabel);
 
         // Create the scene and set it in the stage.
         Scene scene = new Scene(root, 300, 200);

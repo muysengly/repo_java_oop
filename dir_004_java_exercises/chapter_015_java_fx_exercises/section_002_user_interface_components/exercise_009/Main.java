@@ -25,20 +25,19 @@ public class Main extends Application {
         Label capitalLabel = new Label("Capital: ");
 
         // Create a ComboBox with a list of countries.
-        ComboBox<string> countryComboBox = new ComboBox<>(FXCollections.observableArrayList(
-                "United States", "Canada", "United Kingdom", "Germany", "France", "Japan", "Australia"
-        ));
+        ComboBox<String> countryComboBox = new ComboBox<>(FXCollections.observableArrayList(
+                "United States", "Canada", "United Kingdom", "Germany", "France", "Japan", "Australia"));
 
         // Create a map to store the capitals of the countries.
-        Map<string, string=""> countryCapitalMap = new HashMap<>();
+        Map<String, String> countryCapitalMap = new HashMap<>();
         countryCapitalMap.put("Australia", "Canberra");
-		countryCapitalMap.put("Canada", "Ottawa");
-		countryCapitalMap.put("France", "Paris");
-		countryCapitalMap.put("Germany", "Berlin");
-		countryCapitalMap.put("India", "New Delhi");
-		countryCapitalMap.put("Japan", "Tokyo");
-		countryCapitalMap.put("United Kingdom", "London");
-		countryCapitalMap.put("United States", "Washington, D.C.");		
+        countryCapitalMap.put("Canada", "Ottawa");
+        countryCapitalMap.put("France", "Paris");
+        countryCapitalMap.put("Germany", "Berlin");
+        countryCapitalMap.put("India", "New Delhi");
+        countryCapitalMap.put("Japan", "Tokyo");
+        countryCapitalMap.put("United Kingdom", "London");
+        countryCapitalMap.put("United States", "Washington, D.C.");
 
         // Handle the action when a country is selected from the ComboBox.
         countryComboBox.setOnAction(event -> {
@@ -55,8 +54,7 @@ public class Main extends Application {
         Scene scene = new Scene(root, 300, 200);
         primaryStage.setScene(scene);
 
-        // Set the title of the window.
+        // Show the window.
         primaryStage.show();
     }
 }
-</string,></string>
