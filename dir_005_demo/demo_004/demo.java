@@ -31,12 +31,6 @@ public class demo {
             statement.executeUpdate("insert into person values(1, 'mr. aaa')");
             // insert more data
             statement.executeUpdate("insert into person values(2, 'mr. bbb')");
-            // insert more data
-            statement.executeUpdate("insert into person values(3, 'mr. ccc')");
-            // insert more data
-            statement.executeUpdate("insert into person values(4, 'mr. ddd')");
-            // insert more data
-            statement.executeUpdate("insert into person values(5, 'mr. eee')");
 
             // query data from table person
             ResultSet result_set = statement.executeQuery("select * from person");
