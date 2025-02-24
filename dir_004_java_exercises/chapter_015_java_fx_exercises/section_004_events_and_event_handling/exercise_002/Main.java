@@ -5,8 +5,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import javafx.scene.layout.StackPane;
-import javafx.scene.text.Text;
 
 public class Main extends Application {
 
@@ -29,8 +27,11 @@ public class Main extends Application {
         // Register a mouse clicked event handler
         scene.setOnMouseClicked(event -> {
             if (event.isPrimaryButtonDown()) {
-                // System.out.println("Hello\nAlexandra Abramov!");
                 clickLabel.setText("Mouse Click: Left button clicked");
+            } else if (event.isSecondaryButtonDown()) {
+                clickLabel.setText("Mouse Click: Right button clicked");
+            } else if (event.isMiddleButtonDown()) {
+                clickLabel.setText("Mouse Click: Middle button clicked");
             }
         });
 
