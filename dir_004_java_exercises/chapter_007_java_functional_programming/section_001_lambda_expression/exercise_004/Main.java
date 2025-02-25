@@ -1,3 +1,4 @@
+
 // Main.java
 import java.util.Arrays;
 import java.util.List;
@@ -6,16 +7,16 @@ import java.util.stream.Collectors;
 public class Main {
     public static void main(String[] args) {
         // Create a list of integers
-        List<integer> nums = Arrays.asList(11, 23, 98, 34, 15, 32, 42, 80, 99, 100);
-        
-		// Print the original numbers
+        List<Integer> nums = Arrays.asList(11, 23, 98, 34, 15, 32, 42, 80, 99, 100);
+
+        // Print the original numbers
         System.out.println("Original numbers:");
         for (int n : nums) {
-            System.out.print(n+ " ");
-        }		
+            System.out.print(n + " ");
+        }
 
         // Filter out even numbers using lambda expression
-        List<integer> evenNumbers = nums.stream()
+        List<Integer> evenNumbers = nums.stream()
                 .filter(n -> n % 2 == 0)
                 .collect(Collectors.toList());
 
@@ -26,7 +27,7 @@ public class Main {
         }
 
         // Filter out odd numbers using lambda expression
-        List<integer> oddNumbers = nums.stream()
+        List<Integer> oddNumbers = nums.stream()
                 .filter(num -> num % 2 != 0)
                 .collect(Collectors.toList());
 
@@ -37,4 +38,3 @@ public class Main {
         }
     }
 }
-</integer></integer></integer>

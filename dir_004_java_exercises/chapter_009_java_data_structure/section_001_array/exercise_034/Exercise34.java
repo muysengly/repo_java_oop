@@ -24,7 +24,7 @@ public class Exercise34 {
     // Define a method named longest_sequence that takes an array of integers as input.
     public static int longest_sequence(int[] nums) {
         // Create a HashSet to store unique values from the input array.
-        final HashSet<integer> h_set = new HashSet<integer>();
+        final HashSet<Integer> h_set = new HashSet<Integer>();
         for (int i : nums) {
             h_set.add(i);
         }

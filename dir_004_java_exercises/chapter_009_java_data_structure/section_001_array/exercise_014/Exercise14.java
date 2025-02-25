@@ -32,4 +32,4 @@ public class Exercise14 {
         System.out.println("Common element : " + (set)); // OUTPUT: [SQL, JAVA]
     }
 }
-// </string></string>
+//

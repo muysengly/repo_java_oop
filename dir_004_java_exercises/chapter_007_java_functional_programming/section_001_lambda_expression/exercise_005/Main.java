@@ -4,7 +4,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         // Create a list of strings
-        List<string> colors = Arrays.asList("red", "green", "blue", "black", "pink");
+        List<String> colors = Arrays.asList("red", "green", "blue", "black", "pink");
 
         // Print the Original list of strings
         System.out.println("Original strings:");
@@ -22,4 +22,3 @@ public class Main {
         }
     }
 }
-</string>

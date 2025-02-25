@@ -8,7 +8,7 @@ public class Main {
         // Concatenate two strings using the lambda expression
         String string1 = "Good ";
         String string2 = "Morning!";
-		System.out.println("Original strings: " + string1 + ", " +string2);
+        System.out.println("Original strings: " + string1 + ", " + string2);
         String result = concatenate.apply(string1, string2);
 
         // Print the concatenated string

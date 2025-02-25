@@ -4,7 +4,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class demo {
+public class Main {
     public static void main(String[] args) {
         String url = "jdbc:sqlite:database.db";
         String username = "admin";
@@ -29,6 +29,7 @@ public class demo {
 
             // insert data into table person (id, name)
             statement.executeUpdate("insert into person values(1, 'mr. aaa')");
+
             // insert more data
             statement.executeUpdate("insert into person values(2, 'mr. bbb')");
 

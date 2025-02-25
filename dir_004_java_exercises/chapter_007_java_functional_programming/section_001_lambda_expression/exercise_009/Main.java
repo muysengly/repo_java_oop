@@ -20,10 +20,10 @@ public class Main {
         boolean isPrimeResult = is_Prime.test(n);
         // Print the prime check result
         System.out.println(n + " is prime? " + isPrimeResult);
-		// Check if a number is prime using the lambda expression
+        // Check if a number is prime using the lambda expression
         n = 15;
         isPrimeResult = is_Prime.test(n);
         // Print the prime check result
-        System.out.println("\n"+n + " is prime? " + isPrimeResult);
+        System.out.println("\n" + n + " is prime? " + isPrimeResult);
     }
 }

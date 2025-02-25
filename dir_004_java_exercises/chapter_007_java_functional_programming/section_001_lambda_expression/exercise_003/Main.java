@@ -5,7 +5,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         // Create a list of strings
-        List<string> stringList = Arrays.asList("Red", "Green", "Blue", "PINK");
+        List<String> stringList = Arrays.asList("Red", "Green", "Blue", "PINK");
 
         // Print the original strings
         System.out.println("\nOriginal strings:");
@@ -32,4 +32,4 @@ public class Main {
         }
     }
 }
-</string>
+</String>

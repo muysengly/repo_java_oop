@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         // Create a list of integers
         List<Integer> nums = Arrays.asList(12, 15, 0, 8, 7, 9, -6);
-        System.out.println("Original values of the said array: "+nums); 
+        System.out.println("Original values of the said array: " + nums);
         // Find the maximum value using lambda expression
         Optional<Integer> max = nums.stream()
                 .max((x, y) -> x.compareTo(y));
