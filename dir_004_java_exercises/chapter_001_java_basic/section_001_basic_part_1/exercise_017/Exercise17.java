@@ -5,22 +5,14 @@ public class Exercise17 {
     public static void main(String[] args) {
 
         long binary1, binary2;
-
-        int i = 0, remainder = 0;
-
-        int[] result = new int[20];
-
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Input first binary number: ");
-
-        binary1 = scanner.nextLong();
-
-        System.out.print("Input second binary number: ");
-        binary2 = scanner.nextLong();
+        binary1 = 5;
+        binary2 = 1;
 
         System.out.println(binary1);
         System.out.println(binary2);
+
+        int i = 0, remainder = 0;
+        int[] result = new int[20];
 
         while (binary1 != 0 || binary2 != 0) {
 
@@ -35,7 +27,6 @@ public class Exercise17 {
         if (remainder != 0) {
             result[i++] = remainder;
         }
-
         --i;
 
         System.out.print("Sum of two binary numbers: ");
@@ -43,6 +34,6 @@ public class Exercise17 {
             System.out.print(result[i--]);
         }
 
-        scanner.close();
+        // scanner.close();
     }
 }

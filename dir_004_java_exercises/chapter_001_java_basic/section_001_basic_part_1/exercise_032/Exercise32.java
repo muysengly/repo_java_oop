@@ -8,14 +8,12 @@ public class Exercise32 {
         int number1;
         int number2;
 
-        System.out.print("Input first integer: ");
-        number1 = input.nextInt();
+        number1 = 10;
+        number2 = 10;
 
-        System.out.print("Input second integer: ");
-        number2 = input.nextInt();
-
-        if (number1 == number2)
+        if (number1 == number2) {
             System.out.printf("%d == %d\n", number1, number2);
+        }
         if (number1 != number2)
             System.out.printf("%d != %d\n", number1, number2);
         if (number1 < number2)

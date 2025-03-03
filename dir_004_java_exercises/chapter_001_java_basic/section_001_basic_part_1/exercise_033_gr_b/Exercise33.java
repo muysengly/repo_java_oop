@@ -4,10 +4,8 @@ public class Exercise33 {
 
     public static void main(String[] args) {
 
-        Scanner input = new Scanner(System.in);
-
-        System.out.print("Input an integer: ");
-        long n = input.nextLong();
+        long n = 25;
+        System.out.println("The number is: " + n);
 
         System.out.println("The sum of the digits is: " + sumDigits(n));
     }

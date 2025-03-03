@@ -4,19 +4,17 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int x, y, tmp;
-        Scanner in = new Scanner(System.in);
+        int a, b, tmp;
 
-        System.out.println("Input the 1st number: ");
-        x = in.nextInt();
+        a = 15;
+        b = 27;
 
-        System.out.println("Input the 2nd number: ");
-        y = in.nextInt();
+        System.out.println("Before swapping : x, y = " + a + ", " + b);
 
-        tmp = x;
-        x = y;
-        y = tmp;
+        tmp = a;
+        a = b;
+        b = tmp;
 
-        System.out.println("Swapped values are: " + x + " and " + y);
+        System.out.println("Swapped values are: " + a + " and " + b);
     }
 }
