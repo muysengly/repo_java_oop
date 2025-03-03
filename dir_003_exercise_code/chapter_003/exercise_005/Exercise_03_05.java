@@ -12,6 +12,8 @@ public class Exercise_03_05 {
         Scanner input = new Scanner(System.in);
 
         // Prompt the user to enter an integer for today's day of the week
+        System.out
+                .println("0 - Sunday\n1 - Monday\n2 - Tuesday\n3 - Wednesday\n4 - Thursday\n5 - Friday\n6 - Saturday");
         System.out.print("Enter today’s day: ");
         int day = input.nextInt();
 

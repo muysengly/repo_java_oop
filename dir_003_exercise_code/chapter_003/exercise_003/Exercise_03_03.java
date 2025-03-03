@@ -11,6 +11,8 @@ public class Exercise_03_03 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
+        System.out.println("Solve: ax + by = e and cx + dy = f");
+
         // Prompt the user to enter a, b, c, d, e, and f.
         System.out.print("Enter a, b, c, d, e, f: ");
         double a = input.nextDouble();

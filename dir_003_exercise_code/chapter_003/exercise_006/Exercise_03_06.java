@@ -22,7 +22,7 @@ public class Exercise_03_06 {
         final double METERS_PER_INCH = 0.0254; // Constant
         final double FEET_PER_INCH = 0.0833333; // Constant
 
-        // Compute BMI
+        // Compute BMI (Body Mass Index)
         weight *= KILOGRAMS_PER_POUND;
         double height = (inches += feet / FEET_PER_INCH) * METERS_PER_INCH;
         double bmi = weight / (Math.pow(height, 2));
