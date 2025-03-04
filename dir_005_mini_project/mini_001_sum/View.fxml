@@ -38,12 +38,17 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="94.0" prefWidth="356.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller">
    <children>
-      <VBox alignment="CENTER" prefHeight="94.0" prefWidth="356.0">
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="350.0">
          <children>
+            <Label alignment="TOP_CENTER" prefHeight="50.0" text="Mini Project">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
             <HBox alignment="CENTER" prefHeight="62.0" prefWidth="374.0" style="-fx-pref-height: 40;">
                <children>
                   <TextField fx:id="textfield_a" alignment="CENTER" promptText="Input: A" style="-fx-pref-width: 80;" />
