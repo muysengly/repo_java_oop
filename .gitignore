@@ -1,6 +1,9 @@
+# ignore default
 .vscode/
 .git/
 .gitignore
+
+# ignore directories
 dir_998_demo/
 dir_999_other/
 lib/
@@ -8,6 +11,7 @@ __resource__/
 __backup__/
 __tmp__/
 
+# ignore files
 __renamer.ipynb
 __renamer__.ipynb
 __readme__.ipynb
