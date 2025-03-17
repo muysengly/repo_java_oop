@@ -21,10 +21,11 @@ public class ViewController {
     @FXML
     void button_1_action(ActionEvent event) {
 
-        double num_1 = Double.parseDouble(textfield_1.getText());
-        double num_2 = Double.parseDouble(textfield_2.getText());
+        float num_1 = Float.parseFloat(textfield_1.getText());
+        float num_2 = Float.parseFloat(textfield_2.getText());
 
-        label_1.setText(Double.toString(num_1 + num_2));
+        label_1.setText(Float.toString(num_1 + num_2));
+
     }
 
 }
