@@ -52,6 +52,8 @@ public class ViewController implements Initializable {
 
         label_result.setText("Score: " + score + "/3.0");
 
+        button_submit.setDisable(true);
+
     }
 
     @Override
