@@ -29,28 +29,25 @@ public class ViewController implements Initializable {
     @FXML
     void button_buy_action(ActionEvent event) {
 
-        int qlt_apple = spinner_apple.getValue();
-        int qlt_banana = spinner_banana.getValue();
-        int qlt_orange = spinner_orange.getValue();
+        double apple_price = 1;
+        double banana_price = 2;
+        double orange_price = 3;
 
-        double price_apple = 1;
-        double price_banana = 2;
-        double price_orange = 3;
+        int apple_qty = spinner_apple.getValue();
+        int banana_qty = spinner_banana.getValue();
+        int orange_qty = spinner_orange.getValue();
 
-        double total_price = qlt_apple * price_apple + qlt_banana * price_banana + qlt_orange * price_orange;
+        double total_price = apple_price * apple_qty + banana_price * banana_qty + orange_price * orange_qty;
 
         label_price.setText(total_price + "$");
+
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        spinner_apple.setValueFactory(
-                new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, 0));
-        spinner_banana.setValueFactory(
-                new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, 0));
-        spinner_orange.setValueFactory(
-                new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, 0));
-
+        spinner_apple.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, 0));
+        spinner_banana.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, 0));
+        spinner_orange.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, 0));
     }
 
 }

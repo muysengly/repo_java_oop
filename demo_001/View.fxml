@@ -3,23 +3,75 @@
 <?import javafx.scene.Scene?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewController">
-    <AnchorPane prefHeight="193.0" prefWidth="304.0">
-      <children>
-         <Label layoutX="78.0" layoutY="34.0" prefHeight="35.0" prefWidth="147.0" text="Mini Project">
-            <font>
-               <Font size="24.0" />
-            </font>
-         </Label>
-         <TextField fx:id="textfield_1" layoutX="8.0" layoutY="89.0" prefHeight="25.0" prefWidth="80.0" />
-         <Button fx:id="button_1" layoutX="109.0" layoutY="136.0" mnemonicParsing="false" onAction="#button_1_action" text="Calculate" />
-         <TextField fx:id="textfield_2" layoutX="113.0" layoutY="89.0" prefWidth="80.0" />
-         <Label layoutX="93.0" layoutY="93.0" prefHeight="17.0" prefWidth="33.0" text="+" />
-         <Label layoutX="201.0" layoutY="93.0" prefHeight="17.0" prefWidth="18.0" text="=" />
-         <Label fx:id="label_1" layoutX="223.0" layoutY="93.0" prefHeight="17.0" prefWidth="63.0" text="Result" />
-      </children></AnchorPane>
+    <AnchorPane prefHeight="412.0" prefWidth="600.0">
+        <children>
+            <ScrollPane layoutX="87.0" layoutY="85.0" prefHeight="274.0" prefWidth="435.0">
+                <content>
+                    <VBox prefHeight="200.0" prefWidth="404.0">
+                        <children>
+                            <HBox alignment="CENTER_LEFT" prefHeight="72.0" prefWidth="449.0">
+                                <children>
+                                    <Label text="1. Apple (1$/piece): " />
+                                    <ImageView fitHeight="115.0" fitWidth="132.0" pickOnBounds="true" preserveRatio="true">
+                                        <image>
+                                            <Image url="@apple.jpg" />
+                                        </image>
+                                    </ImageView>
+                                    <Label text=" x " />
+                                    <Spinner fx:id="spinner_apple" prefHeight="26.0" prefWidth="107.0" />
+                                </children>
+                            </HBox>
+                            <HBox alignment="CENTER_LEFT" prefHeight="72.0" prefWidth="449.0">
+                                <children>
+                                    <Label text="2. Banana (2$/piece): " />
+                                    <ImageView fitHeight="115.0" fitWidth="132.0" pickOnBounds="true" preserveRatio="true">
+                                        <image>
+                                            <Image url="@../dir_005_mini_project/mini_004/banana.jpg" />
+                                        </image>
+                                    </ImageView>
+                                    <Label text=" x " />
+                                    <Spinner fx:id="spinner_banana" prefHeight="26.0" prefWidth="107.0" />
+                                </children>
+                            </HBox>
+                            <HBox alignment="CENTER_LEFT" prefHeight="72.0" prefWidth="449.0">
+                                <children>
+                                    <Label text="3. Orange (3$/piece): " />
+                                    <ImageView fitHeight="115.0" fitWidth="132.0" pickOnBounds="true" preserveRatio="true">
+                                        <image>
+                                            <Image url="@../dir_005_mini_project/mini_004/orange.jpg" />
+                                        </image>
+                                    </ImageView>
+                                    <Label text=" x " />
+                                    <Spinner fx:id="spinner_orange" prefHeight="26.0" prefWidth="107.0" />
+                                </children>
+                            </HBox>
+                        </children>
+                    </VBox>
+                </content>
+            </ScrollPane>
+            <Label layoutX="253.0" layoutY="20.0" text="Mini Project">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+            <Button fx:id="button_buy" layoutX="266.0" layoutY="369.0" mnemonicParsing="false" onAction="#button_buy_action" text="Buy" />
+            <Label layoutX="269.0" layoutY="47.0" text="Shoping">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <Label layoutX="497.0" layoutY="370.0" text="Total:" />
+            <Label fx:id="label_price" layoutX="549.0" layoutY="370.0" text="Price" />
+        </children>
+    </AnchorPane>
 </Scene>
