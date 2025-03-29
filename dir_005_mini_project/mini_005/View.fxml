@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewController">
+    <AnchorPane prefHeight="400.0" prefWidth="600.0">
+      <children>
+         <Label layoutX="235.0" layoutY="19.0" text="Mini Project">
+            <font>
+               <Font size="24.0" />
+            </font>
+         </Label>
+         <Label layoutX="223.0" layoutY="52.0" text="Survey ITC Student">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Label>
+         <Label layoutX="134.0" layoutY="92.0" text="1. What is your name?">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Label>
+         <TextField fx:id="textfield_name" layoutX="321.0" layoutY="87.0">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </TextField>
+         <Label layoutX="134.0" layoutY="127.0" text="2. What is your date of birth?">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Label>
+         <PasswordField fx:id="passwordfield_date_of_birth" layoutX="321.0" layoutY="122.0">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </PasswordField>
+         <Label layoutX="134.0" layoutY="160.0" text="3. Which is your department?">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Label>
+         <VBox layoutX="165.0" layoutY="186.0">
+            <children>
+               <RadioButton fx:id="radiobutton_eee" layoutX="75.0" layoutY="-21.0" mnemonicParsing="false" text="Department of EEE">
+                  <font>
+                     <Font size="14.0" />
+                  </font>
+                  <toggleGroup>
+                     <ToggleGroup fx:id="group_department" />
+                  </toggleGroup>
+               </RadioButton>
+               <RadioButton fx:id="radiobutton_tn" layoutX="75.0" layoutY="-1.0" mnemonicParsing="false" text="Department of TN" toggleGroup="$group_department">
+                  <font>
+                     <Font size="14.0" />
+                  </font>
+               </RadioButton>
+               <RadioButton fx:id="radiobutton_ams" layoutX="75.0" layoutY="19.0" mnemonicParsing="false" text="Department of AMS" toggleGroup="$group_department">
+                  <font>
+                     <Font size="14.0" />
+                  </font>
+               </RadioButton>
+            </children>
+         </VBox>
+         <Label layoutX="134.0" layoutY="256.0" text="4. Which courses would you like? ">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Label>
+         <VBox layoutX="166.0" layoutY="281.0">
+            <children>
+               <CheckBox fx:id="checkbox_filter_design" layoutX="75.0" layoutY="-21.0" mnemonicParsing="false" text="Filter Design">
+                  <font>
+                     <Font size="14.0" />
+                  </font>
+               </CheckBox>
+               <CheckBox fx:id="checkbox_microcontroller_and_sensor" layoutX="75.0" layoutY="-1.0" mnemonicParsing="false" text="Microcontroller and Sensor">
+                  <font>
+                     <Font size="14.0" />
+                  </font>
+               </CheckBox>
+               <CheckBox fx:id="checkbox_object_oriented_programming" layoutX="75.0" layoutY="19.0" mnemonicParsing="false" text="Object Oriented Programming">
+                  <font>
+                     <Font size="14.0" />
+                  </font>
+               </CheckBox>
+            </children>
+         </VBox>
+         <Button fx:id="button_save" layoutX="274.0" layoutY="357.0" mnemonicParsing="false" text="Save ">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Button>
+         <Label fx:id="label_status" alignment="CENTER_RIGHT" layoutX="465.0" layoutY="362.0" prefHeight="20.0" prefWidth="120.0" text="Status">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Label>
+         <ImageView fitHeight="96.0" fitWidth="80.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@itc_logo.png" />
+            </image>
+         </ImageView>
+      </children>
+   </AnchorPane>
+</Scene>
