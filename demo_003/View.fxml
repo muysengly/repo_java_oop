@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewController">
+    <AnchorPane prefHeight="400.0" prefWidth="481.0">
+      <children>
+         <Label layoutX="252.0" layoutY="27.0" text="Mini Project">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Label>
+         <Button fx:id="button_submit" layoutX="273.0" layoutY="315.0" mnemonicParsing="false" text="Submit" />
+         <HBox alignment="CENTER" layoutX="129.0" layoutY="91.0">
+            <children>
+               <Label prefWidth="120.0" text="1. Name:" />
+               <TextField fx:id="textfield_name" />
+            </children>
+         </HBox>
+         <HBox alignment="CENTER" layoutX="129.0" layoutY="126.0">
+            <children>
+               <Label prefWidth="120.0" text="2. Date of Birth:" />
+               <DatePicker fx:id="datepicker_dob" />
+            </children>
+         </HBox>
+         <HBox layoutX="129.0" layoutY="166.0">
+            <children>
+               <Label prefWidth="120.0" text="3. Department:" />
+               <VBox>
+                  <children>
+                     <RadioButton fx:id="radiobutton_gee" mnemonicParsing="false" text="Dept. GEE">
+                        <toggleGroup>
+                           <ToggleGroup fx:id="abc" />
+                        </toggleGroup>
+                     </RadioButton>
+                     <RadioButton fx:id="radiobutton_gtr" mnemonicParsing="false" text="Dept. GTR" toggleGroup="$abc" />
+                     <RadioButton fx:id="radiobutton_gic" mnemonicParsing="false" text="Dept. GIC" toggleGroup="$abc" />
+                  </children>
+               </VBox>
+            </children>
+         </HBox>
+         <HBox layoutX="129.0" layoutY="229.0">
+            <children>
+               <Label prefWidth="120.0" text="4. Favorite Courses:" />
+               <VBox>
+                  <children>
+                     <CheckBox fx:id="checkbox_mic_con" mnemonicParsing="false" text="Micro Controller" />
+                     <CheckBox fx:id="checkbox_prog" mnemonicParsing="false" text="Programming" />
+                     <CheckBox fx:id="checkbox_ana_cir" mnemonicParsing="false" text="Analog Circuit" />
+                  </children>
+               </VBox>
+            </children>
+         </HBox>
+         <ImageView fitHeight="95.0" fitWidth="91.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@itc_logo.png" />
+            </image>
+         </ImageView>
+         <Label layoutX="253.0" layoutY="56.0" text="Survey Student">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Label>
+         <Label fx:id="label_staus" layoutX="370.0" layoutY="321.0" prefHeight="17.0" prefWidth="216.0" text="Status" />
+      </children></AnchorPane>
+</Scene>

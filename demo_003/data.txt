@@ -1,0 +1,7 @@
+Name: Sengly
+Date of Birth: 2025-04-24
+Department: GTR
+Favorite: 
+ - Analog Circuit 
+ - Microcontroller 
+- Programming 
