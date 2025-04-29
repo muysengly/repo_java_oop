@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RegisterController">
+    <AnchorPane prefHeight="400.0" prefWidth="600.0">
+      <children>
+         <Label layoutX="254.0" layoutY="53.0" text="Mini Project">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Label>
+         <Label layoutX="252.0" layoutY="87.0" text="Register Form">
+            <font>
+               <Font size="16.0" />
+            </font>
+         </Label>
+         <Label layoutX="82.0" layoutY="162.0" text="User Name" />
+         <Label layoutX="88.0" layoutY="226.0" text="Password" />
+         <Label layoutX="88.0" layoutY="283.0" text="Verify Password" />
+         <TextField fx:id="textfield_username" layoutX="222.0" layoutY="158.0" prefWidth="200.0" />
+         <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="49.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@itc_logo.png" />
+            </image></ImageView>
+         <StackPane layoutX="229.0" layoutY="231.0">
+            <children>
+               <PasswordField fx:id="passwordfield_password" onKeyTyped="#passwordfield_password_action" prefWidth="200.0" />
+               <TextField fx:id="textfield_password" onKeyTyped="#textfield_password_action" prefWidth="200.0" visible="false" />
+            </children>
+         </StackPane>
+         <PasswordField fx:id="passwordfield_verify_password" layoutX="231.0" layoutY="279.0" onKeyTyped="#passwordfield_verify_password_action" prefWidth="200.0" />
+         <CheckBox fx:id="checkbox_show_password" layoutX="453.0" layoutY="235.0" mnemonicParsing="false" onAction="#checkbox_show_password_action" text="Show" />
+         <Button fx:id="button_register" layoutX="272.0" layoutY="344.0" mnemonicParsing="false" onAction="#button_register_action" text="Register" />
+         <Label fx:id="label_status_password" layoutX="231.0" layoutY="257.0" prefWidth="200.0" text="Status" />
+         <Label fx:id="label_status_verify_password" layoutX="236.0" layoutY="313.0" prefWidth="200.0" text="Status" />
+         <Label layoutX="230.0" layoutY="208.0" prefHeight="18.0" prefWidth="202.0" text="*Password must at least 6 charators" />
+         <Label layoutX="222.0" layoutY="140.0" prefHeight="18.0" prefWidth="210.0" text="*User name must at least 6 charators" />
+         <Button fx:id="button_back_to_login" layoutX="14.0" layoutY="357.0" mnemonicParsing="false" onAction="#button_back_to_login_action" text="Back to Login" />
+      </children></AnchorPane>
+</Scene>

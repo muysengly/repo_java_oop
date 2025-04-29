@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginController">
+    <AnchorPane prefHeight="400.0" prefWidth="600.0">
+        <children>
+            <Label layoutX="104.0" layoutY="144.0" text="User Name" />
+            <Label layoutX="104.0" layoutY="191.0" text="Password" />
+            <TextField fx:id="textfield_username" layoutX="206.0" layoutY="140.0" prefWidth="200.0" />
+            <Group layoutX="200.0" layoutY="187.0">
+                <children>
+                    <PasswordField fx:id="passwordfield_password" prefWidth="200.0" />
+                    <TextField fx:id="textfield_password" prefWidth="200.0" visible="false" />
+                </children>
+            </Group>
+            <Button fx:id="button_login" layoutX="277.0" layoutY="250.0" mnemonicParsing="false" onAction="#button_login_action" text="Login" />
+            <Button fx:id="button_goto_register" layoutX="497.0" layoutY="360.0" mnemonicParsing="false" onAction="#button_register_action" text="Goto Register" />
+            <Label layoutX="233.0" layoutY="41.0" text="Mini Project">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+            <Label layoutX="233.0" layoutY="79.0" text="Login Form">
+                <font>
+                    <Font size="16.0" />
+                </font>
+            </Label>
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="34.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@itc_logo.png" />
+                </image>
+            </ImageView>
+            <CheckBox fx:id="checkbox_show_pw" layoutX="406.0" layoutY="191.0" mnemonicParsing="false" onAction="#checkbox_show_pw_action" text="Show" />
+         <Label fx:id="label_status" layoutX="200.0" layoutY="221.0" prefHeight="18.0" prefWidth="204.0" text="Status" />
+        </children>
+    </AnchorPane>
+</Scene>
