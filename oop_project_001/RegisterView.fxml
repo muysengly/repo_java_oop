@@ -28,7 +28,7 @@
          <Label layoutX="82.0" layoutY="162.0" text="User Name" />
          <Label layoutX="88.0" layoutY="226.0" text="Password" />
          <Label layoutX="88.0" layoutY="283.0" text="Verify Password" />
-         <TextField fx:id="textfield_username" layoutX="222.0" layoutY="158.0" prefWidth="200.0" />
+         <TextField fx:id="textfield_username" layoutX="222.0" layoutY="158.0" onKeyTyped="#textfield_username_" prefWidth="200.0" />
          <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="49.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
             <image>
                <Image url="@itc_logo.png" />
@@ -45,7 +45,9 @@
          <Label fx:id="label_status_password" layoutX="231.0" layoutY="257.0" prefWidth="200.0" text="Status" />
          <Label fx:id="label_status_verify_password" layoutX="236.0" layoutY="313.0" prefWidth="200.0" text="Status" />
          <Label layoutX="230.0" layoutY="208.0" prefHeight="18.0" prefWidth="202.0" text="*Password must at least 6 charators" />
-         <Label layoutX="222.0" layoutY="140.0" prefHeight="18.0" prefWidth="210.0" text="*User name must at least 6 charators" />
+         <Label layoutX="217.0" layoutY="120.0" prefHeight="18.0" prefWidth="210.0" text="*User name must at least 6 charators" />
          <Button fx:id="button_back_to_login" layoutX="14.0" layoutY="357.0" mnemonicParsing="false" onAction="#button_back_to_login_action" text="Back to Login" />
+         <Label layoutX="217.0" layoutY="138.0" prefHeight="18.0" prefWidth="210.0" text="*Only alphanumeric characters" />
+         <Label fx:id="label_status_username" layoutX="222.0" layoutY="184.0" prefWidth="200.0" text="Status" />
       </children></AnchorPane>
 </Scene>

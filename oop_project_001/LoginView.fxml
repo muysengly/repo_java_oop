@@ -25,7 +25,7 @@
                 </children>
             </Group>
             <Button fx:id="button_login" layoutX="277.0" layoutY="250.0" mnemonicParsing="false" onAction="#button_login_action" text="Login" />
-            <Button fx:id="button_goto_register" layoutX="497.0" layoutY="360.0" mnemonicParsing="false" onAction="#button_register_action" text="Goto Register" />
+            <Button fx:id="button_goto_register" layoutX="497.0" layoutY="360.0" mnemonicParsing="false" onAction="#button_register_action" text="Register" />
             <Label layoutX="233.0" layoutY="41.0" text="Mini Project">
                 <font>
                     <Font size="18.0" />

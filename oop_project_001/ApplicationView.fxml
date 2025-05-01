@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ApplicationController">
     <AnchorPane prefHeight="400.0" prefWidth="600.0">
       <children>
          <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="34.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
@@ -30,6 +30,6 @@
                <Font size="20.0" />
             </font>
          </Label>
-         <Button layoutX="14.0" layoutY="360.0" mnemonicParsing="false" text="Back to Login" />
+         <Button fx:id="button_logout" layoutX="14.0" layoutY="360.0" mnemonicParsing="false" onAction="#button_logout_" text="Logout" />
       </children></AnchorPane>
 </Scene>

@@ -9,9 +9,13 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
+import my_objects.Login_v1;
 
 public class LoginController {
+
+    Login_v1 login_v1 = new Login_v1("credentials.csv");
 
     @FXML
     private Button button_goto_register;
@@ -36,6 +40,24 @@ public class LoginController {
 
     @FXML
     void button_login_action(ActionEvent event) {
+
+        String username = textfield_username.getText();
+        String password = passwordfield_password.getText();
+
+        if (login_v1.login(username, password)) {
+
+            try {
+                Stage stage = (Stage) button_login.getScene().getWindow();
+                Scene scene = FXMLLoader.load(getClass().getResource("ApplicationView.fxml"));
+                stage.setScene(scene);
+                stage.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        } else {
+            label_status.setText("Invalid username or password");
+        }
 
     }
 

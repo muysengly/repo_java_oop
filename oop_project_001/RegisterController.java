@@ -11,8 +11,11 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
+import my_objects.Register_v2;
 
 public class RegisterController {
+
+    Register_v2 register_v2 = new Register_v2("credentials.csv");
 
     @FXML
     private Button button_back_to_login;
@@ -25,6 +28,9 @@ public class RegisterController {
 
     @FXML
     private Label label_status_password;
+
+    @FXML
+    private Label label_status_username;
 
     @FXML
     private Label label_status_verify_password;
@@ -56,6 +62,23 @@ public class RegisterController {
     @FXML
     void button_register_action(ActionEvent event) {
 
+        String username = textfield_username.getText();
+        String password = "";
+
+        if (passwordfield_password.isVisible() == true) {
+            password = passwordfield_password.getText();
+        } else {
+            password = textfield_password.getText();
+        }
+
+        if (register_v2.validateUsername(username) && register_v2.validatePassword(password)) {
+            register_v2.register(username, password);
+            System.out.println("User registered successfully");
+        } else {
+            System.out.println("Invalid username or password");
+
+        }
+
     }
 
     @FXML
@@ -72,14 +95,28 @@ public class RegisterController {
     }
 
     @FXML
-    void passwordfield_password_action(KeyEvent event) {
-        String password = passwordfield_password.getText();
-        if (password.length() < 6) {
-            label_status_password.setText("invalid password");
-            label_status_password.setStyle("-fx-text-fill: red;");
-        } else {
+    void textfield_password_action(KeyEvent event) {
+
+        String password = textfield_password.getText();
+
+        if (register_v2.validatePassword(password)) {
             label_status_password.setText("valid password");
             label_status_password.setStyle("-fx-text-fill: green;");
+        } else {
+            label_status_password.setText("invalid password");
+            label_status_password.setStyle("-fx-text-fill: red;");
+        }
+    }
+
+    @FXML
+    void passwordfield_password_action(KeyEvent event) {
+        String password = passwordfield_password.getText();
+        if (register_v2.validatePassword(password)) {
+            label_status_password.setText("valid password");
+            label_status_password.setStyle("-fx-text-fill: green;");
+        } else {
+            label_status_password.setText("invalid password");
+            label_status_password.setStyle("-fx-text-fill: red;");
         }
     }
 
@@ -95,25 +132,27 @@ public class RegisterController {
 
         String verify_password = passwordfield_verify_password.getText();
 
-        if (!password.equals(verify_password)) {
-            label_status_verify_password.setText("passwords do not match");
-            label_status_verify_password.setStyle("-fx-text-fill: red;");
-        } else {
+        if (register_v2.validateTwoPasswords(password, verify_password)) {
             label_status_verify_password.setText("passwords match");
             label_status_verify_password.setStyle("-fx-text-fill: green;");
+        } else {
+            label_status_verify_password.setText("passwords do not match");
+            label_status_verify_password.setStyle("-fx-text-fill: red;");
         }
     }
 
     @FXML
-    void textfield_password_action(KeyEvent event) {
-        String password = textfield_password.getText();
-        if (password.length() < 6) {
-            label_status_password.setText("invalid password");
-            label_status_password.setStyle("-fx-text-fill: red;");
+    void textfield_username_(KeyEvent event) {
+        String username = textfield_username.getText();
+
+        if (register_v2.validateUsername(username)) {
+            label_status_username.setText("valid username");
+            label_status_username.setStyle("-fx-text-fill: green;");
         } else {
-            label_status_password.setText("valid password");
-            label_status_password.setStyle("-fx-text-fill: green;");
+            label_status_username.setText("invalid username");
+            label_status_username.setStyle("-fx-text-fill: red;");
         }
+
     }
 
 }
