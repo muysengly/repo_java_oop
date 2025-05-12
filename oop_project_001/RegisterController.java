@@ -11,7 +11,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
-import my_objects.Register_v2;
+import utility.Register_v2;
 
 public class RegisterController {
 
@@ -65,7 +65,7 @@ public class RegisterController {
         String username = textfield_username.getText();
         String password = "";
 
-        if (passwordfield_password.isVisible() == true) {
+        if (passwordfield_password.isVisible()) {
             password = passwordfield_password.getText();
         } else {
             password = textfield_password.getText();
@@ -83,12 +83,17 @@ public class RegisterController {
 
     @FXML
     void checkbox_show_password_action(ActionEvent event) {
+
         if (checkbox_show_password.isSelected()) {
-            textfield_password.setText(passwordfield_password.getText());
+            String password = passwordfield_password.getText();
+            textfield_password.setText(password);
+
             textfield_password.setVisible(true);
             passwordfield_password.setVisible(false);
         } else {
-            passwordfield_password.setText(textfield_password.getText());
+            String password = textfield_password.getText();
+            passwordfield_password.setText(password);
+
             passwordfield_password.setVisible(true);
             textfield_password.setVisible(false);
         }
@@ -97,7 +102,12 @@ public class RegisterController {
     @FXML
     void textfield_password_action(KeyEvent event) {
 
-        String password = textfield_password.getText();
+        String password;
+        if (passwordfield_password.isVisible()) {
+            password = passwordfield_password.getText();
+        } else {
+            password = textfield_password.getText();
+        }
 
         if (register_v2.validatePassword(password)) {
             label_status_password.setText("valid password");
@@ -105,12 +115,29 @@ public class RegisterController {
         } else {
             label_status_password.setText("invalid password");
             label_status_password.setStyle("-fx-text-fill: red;");
+        }
+
+        String verify_password = passwordfield_verify_password.getText();
+
+        if (register_v2.validateTwoPasswords(password, verify_password) && verify_password.length() > 6) {
+            label_status_verify_password.setText("passwords match");
+            label_status_verify_password.setStyle("-fx-text-fill: green;");
+        } else {
+            label_status_verify_password.setText("passwords do not match");
+            label_status_verify_password.setStyle("-fx-text-fill: red;");
         }
     }
 
     @FXML
     void passwordfield_password_action(KeyEvent event) {
-        String password = passwordfield_password.getText();
+
+        String password;
+        if (passwordfield_password.isVisible()) {
+            password = passwordfield_password.getText();
+        } else {
+            password = textfield_password.getText();
+        }
+
         if (register_v2.validatePassword(password)) {
             label_status_password.setText("valid password");
             label_status_password.setStyle("-fx-text-fill: green;");
@@ -118,13 +145,23 @@ public class RegisterController {
             label_status_password.setText("invalid password");
             label_status_password.setStyle("-fx-text-fill: red;");
         }
+
+        String verify_password = passwordfield_verify_password.getText();
+
+        if (register_v2.validateTwoPasswords(password, verify_password) && verify_password.length() > 6) {
+            label_status_verify_password.setText("passwords match");
+            label_status_verify_password.setStyle("-fx-text-fill: green;");
+        } else {
+            label_status_verify_password.setText("passwords do not match");
+            label_status_verify_password.setStyle("-fx-text-fill: red;");
+        }
     }
 
     @FXML
     void passwordfield_verify_password_action(KeyEvent event) {
-        String password = "";
 
-        if (passwordfield_password.isVisible() == true) {
+        String password = "";
+        if (passwordfield_password.isVisible()) {
             password = passwordfield_password.getText();
         } else {
             password = textfield_password.getText();
@@ -132,7 +169,7 @@ public class RegisterController {
 
         String verify_password = passwordfield_verify_password.getText();
 
-        if (register_v2.validateTwoPasswords(password, verify_password)) {
+        if (register_v2.validateTwoPasswords(password, verify_password) && verify_password.length() > 6) {
             label_status_verify_password.setText("passwords match");
             label_status_verify_password.setStyle("-fx-text-fill: green;");
         } else {

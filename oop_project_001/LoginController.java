@@ -9,9 +9,8 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
-import my_objects.Login_v1;
+import utility.Login_v1;
 
 public class LoginController {
 
@@ -42,7 +41,13 @@ public class LoginController {
     void button_login_action(ActionEvent event) {
 
         String username = textfield_username.getText();
-        String password = passwordfield_password.getText();
+
+        String password;
+        if (passwordfield_password.isVisible()) {
+            password = passwordfield_password.getText();
+        } else {
+            password = textfield_password.getText();
+        }
 
         if (login_v1.login(username, password)) {
 
@@ -57,6 +62,7 @@ public class LoginController {
 
         } else {
             label_status.setText("Invalid username or password");
+            label_status.setStyle("-fx-text-fill: red;");
         }
 
     }
@@ -76,11 +82,17 @@ public class LoginController {
     @FXML
     void checkbox_show_pw_action(ActionEvent event) {
         if (checkbox_show_pw.isSelected()) {
-            textfield_password.setText(passwordfield_password.getText());
+
+            String password = passwordfield_password.getText();
+            textfield_password.setText(password);
+
             textfield_password.setVisible(true);
             passwordfield_password.setVisible(false);
         } else {
-            passwordfield_password.setText(textfield_password.getText());
+
+            String password = textfield_password.getText();
+            passwordfield_password.setText(password);
+
             passwordfield_password.setVisible(true);
             textfield_password.setVisible(false);
         }

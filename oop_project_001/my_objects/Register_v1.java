@@ -1,11 +1,10 @@
 package my_objects;
 
 import my_abstract.RegisterAbstract;
-import my_encapsulation.CredentialEncapsulation;
 
 public class Register_v1 extends RegisterAbstract {
 
-    private CredentialEncapsulation credentials = new CredentialEncapsulation();
+    private Credential_v1 credentials = new Credential_v1();
 
     public Register_v1(String filePath) {
         credentials.loadCredentials(filePath);

@@ -1,11 +1,10 @@
 package my_objects;
 
 import my_abstract.LoginAbstract;
-import my_encapsulation.CredentialEncapsulation;
 
 public class Login_v1 extends LoginAbstract {
 
-    private CredentialEncapsulation credentials = new CredentialEncapsulation();
+    private Credential_v1 credentials = new Credential_v1();
 
     public Login_v1(String filePath) {
         credentials.loadCredentials(filePath);

@@ -1,8 +1,8 @@
-package my_encapsulation;
+package my_objects;
 
 import my_abstract.CredentialAbstract;
 
-public class CredentialEncapsulation extends CredentialAbstract {
+public class Credential_v1 extends CredentialAbstract {
 
     private String database;
     private String[][] credentials;
@@ -44,7 +44,7 @@ public class CredentialEncapsulation extends CredentialAbstract {
 
     public static void main(String[] args) {
 
-        CredentialEncapsulation encapsulation = new CredentialEncapsulation();
+        Credential_v1 encapsulation = new Credential_v1();
 
         encapsulation.loadCredentials("../credentials.csv");
 
