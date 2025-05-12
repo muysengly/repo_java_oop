@@ -73,9 +73,11 @@ public class ViewController implements Initializable {
                 String courses = "Favourite Courses: ";
                 if (checkbox_object_oriented_programming.isSelected()) {
                     courses = courses + "\n\t - Object Oriented Programming";
-                } else if (checkbox_microcontroller_and_sensor.isSelected()) {
+                }
+                if (checkbox_microcontroller_and_sensor.isSelected()) {
                     courses = courses + "\n\t - Microcontroller and Sensor";
-                } else if (checkbox_filter_design.isSelected()) {
+                }
+                if (checkbox_filter_design.isSelected()) {
                     courses = courses + "\n\t - Filter Design";
                 }
                 String content = name + "\n" + dob + "\n" + department + "\n" + courses;

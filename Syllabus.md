@@ -1,5 +1,0 @@
-- Code: https://github.com/muysengly/repo_java
-- VSCode Application
-- Java 23 Application
-- SceneBuilder Application
-- JavaFX 24 Application

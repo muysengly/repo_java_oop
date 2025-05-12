@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginController">
+    <AnchorPane prefHeight="400.0" prefWidth="600.0">
+      <children>
+         <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="27.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@itc_logo.png" />
+            </image>
+         </ImageView>
+         <Label layoutX="266.0" layoutY="66.0" text="Project OOP" />
+         <Label layoutX="269.0" layoutY="95.0" text="Login Form" />
+         <Label layoutX="175.0" layoutY="153.0" text="Username" />
+         <TextField fx:id="textfield_username" layoutX="233.0" layoutY="149.0" promptText="username" />
+         <Label layoutX="176.0" layoutY="200.0" text="Password" />
+         <TextField fx:id="textfield_password" layoutX="233.0" layoutY="196.0" promptText="password" visible="false" />
+         <PasswordField fx:id="passwordfield_password" layoutX="233.0" layoutY="196.0" promptText="password" />
+         <CheckBox fx:id="checkbox_show_password" layoutX="398.0" layoutY="200.0" mnemonicParsing="false" onAction="#checkbox_show_password_action" text="Show" />
+         <Button fx:id="button_login" layoutX="277.0" layoutY="250.0" mnemonicParsing="false" onAction="#button_login_action" text="Login" />
+         <Button fx:id="button_register" layoutX="499.0" layoutY="335.0" mnemonicParsing="false" onAction="#button_register_action" text="Register" />
+         <Label fx:id="label_status" layoutX="27.0" layoutY="360.0" prefHeight="17.0" prefWidth="166.0" text="Status" />
+      </children></AnchorPane>
+</Scene>

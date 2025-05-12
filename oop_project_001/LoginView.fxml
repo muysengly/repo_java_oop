@@ -15,34 +15,34 @@
 <Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginController">
     <AnchorPane prefHeight="400.0" prefWidth="600.0">
         <children>
-            <Label layoutX="104.0" layoutY="144.0" text="User Name" />
-            <Label layoutX="104.0" layoutY="191.0" text="Password" />
-            <TextField fx:id="textfield_username" layoutX="206.0" layoutY="140.0" prefWidth="200.0" />
-            <Group layoutX="200.0" layoutY="187.0">
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="32.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@itc_logo.png" />
+                </image>
+            </ImageView>
+            <Label layoutX="266.0" layoutY="39.0" text="Mini Project">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+            <Label layoutX="273.0" layoutY="73.0" text="Login Form">
+                <font>
+                    <Font size="16.0" />
+                </font>
+            </Label>
+            <Label layoutX="171.0" layoutY="168.0" text="Username" />
+            <TextField fx:id="textfield_username" layoutX="227.0" layoutY="164.0" prefWidth="200.0" />
+            <Label layoutX="175.0" layoutY="201.0" text="Password" />
+            <Group layoutX="228.0" layoutY="197.0">
                 <children>
                     <PasswordField fx:id="passwordfield_password" prefWidth="200.0" />
                     <TextField fx:id="textfield_password" prefWidth="200.0" visible="false" />
                 </children>
             </Group>
-            <Button fx:id="button_login" layoutX="277.0" layoutY="250.0" mnemonicParsing="false" onAction="#button_login_action" text="Login" />
-            <Button fx:id="button_goto_register" layoutX="497.0" layoutY="360.0" mnemonicParsing="false" onAction="#button_register_action" text="Register" />
-            <Label layoutX="233.0" layoutY="41.0" text="Mini Project">
-                <font>
-                    <Font size="18.0" />
-                </font>
-            </Label>
-            <Label layoutX="233.0" layoutY="79.0" text="Login Form">
-                <font>
-                    <Font size="16.0" />
-                </font>
-            </Label>
-            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="34.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
-                <image>
-                    <Image url="@itc_logo.png" />
-                </image>
-            </ImageView>
-            <CheckBox fx:id="checkbox_show_pw" layoutX="406.0" layoutY="191.0" mnemonicParsing="false" onAction="#checkbox_show_pw_action" text="Show" />
-         <Label fx:id="label_status" layoutX="200.0" layoutY="221.0" prefHeight="18.0" prefWidth="204.0" text="Status" />
+         <Label fx:id="label_status" layoutX="228.0" layoutY="222.0" prefHeight="18.0" prefWidth="200.0" text="Status" />
+            <CheckBox fx:id="checkbox_show_pw" layoutX="436.0" layoutY="200.0" mnemonicParsing="false" onAction="#checkbox_show_pw_action" text="Show" />
+            <Button fx:id="button_login" layoutX="291.0" layoutY="251.0" mnemonicParsing="false" onAction="#button_login_action" text="Login" />
+            <Button fx:id="button_goto_register" layoutX="526.0" layoutY="360.0" mnemonicParsing="false" onAction="#button_register_action" text="Register" />
         </children>
     </AnchorPane>
 </Scene>

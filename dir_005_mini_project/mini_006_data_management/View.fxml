@@ -13,27 +13,27 @@
 <Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewController">
     <AnchorPane prefHeight="400.0" prefWidth="600.0">
       <children>
-         <Label layoutX="254.0" layoutY="14.0" text="Mini Project">
-            <font>
-               <Font size="18.0" />
-            </font>
-         </Label>
          <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="14.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
             <image>
                <Image url="@itc_logo.png" />
             </image>
          </ImageView>
+         <Label layoutX="254.0" layoutY="14.0" text="Mini Project">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Label>
          <Label layoutX="236.0" layoutY="41.0" text="Data Management">
             <font>
                <Font size="16.0" />
             </font>
          </Label>
+         <ListView fx:id="listview_dataview" layoutX="176.0" layoutY="78.0" onMouseClicked="#listview_dataview_" prefHeight="240.0" prefWidth="250.0" />
+         <TextField fx:id="textfield_input" layoutX="176.0" layoutY="321.0" prefHeight="26.0" prefWidth="250.0" />
+         <Button fx:id="button_add" layoutX="176.0" layoutY="350.0" mnemonicParsing="false" onAction="#button_add_" text="Add" />
+         <Button fx:id="button_update" layoutX="236.0" layoutY="351.0" mnemonicParsing="false" onAction="#button_update_" text="Update" />
+         <Button fx:id="button_delete" layoutX="315.0" layoutY="351.0" mnemonicParsing="false" onAction="#button_delete_" text="Delete" />
+         <Button fx:id="button_save" layoutX="386.0" layoutY="351.0" mnemonicParsing="false" onAction="#button_save_" text="Save" />
          <Label fx:id="label_status" alignment="CENTER_RIGHT" layoutX="382.0" layoutY="372.0" prefHeight="18.0" prefWidth="204.0" text="Status" />
-         <ListView fx:id="listview_dataview" layoutX="176.0" layoutY="67.0" onMouseClicked="#listview_dataview_" prefHeight="240.0" prefWidth="250.0" />
-         <TextField fx:id="textfield_input" layoutX="176.0" layoutY="310.0" prefHeight="26.0" prefWidth="250.0" />
-         <Button fx:id="button_add" layoutX="176.0" layoutY="340.0" mnemonicParsing="false" onAction="#button_add_" text="Add" />
-         <Button fx:id="button_update" layoutX="236.0" layoutY="340.0" mnemonicParsing="false" onAction="#button_update_" text="Update" />
-         <Button fx:id="button_delete" layoutX="315.0" layoutY="340.0" mnemonicParsing="false" onAction="#button_delete_" text="Delete" />
-         <Button fx:id="button_save" layoutX="386.0" layoutY="340.0" mnemonicParsing="false" onAction="#button_save_" text="Save" />
       </children></AnchorPane>
 </Scene>

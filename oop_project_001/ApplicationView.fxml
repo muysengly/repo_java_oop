@@ -15,17 +15,17 @@
             <image>
                <Image url="@itc_logo.png" />
             </image></ImageView>
-         <Label layoutX="272.0" layoutY="64.0" text="Mini Project">
+         <Label layoutX="272.0" layoutY="28.0" text="Mini Project">
             <font>
                <Font size="18.0" />
             </font>
          </Label>
-         <Label layoutX="260.0" layoutY="102.0" text="Main Application">
+         <Label layoutX="260.0" layoutY="55.0" text="Main Application">
             <font>
                <Font size="16.0" />
             </font>
          </Label>
-         <Label layoutX="200.0" layoutY="221.0" text="Welcome to the application.">
+         <Label layoutX="196.0" layoutY="184.0" text="Welcome to the application.">
             <font>
                <Font size="20.0" />
             </font>
