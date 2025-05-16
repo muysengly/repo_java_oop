@@ -7,12 +7,13 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
-public class LoginController {
+public class RegisterController {
 
     @FXML
-    private Button button_login;
+    private Button button_back_to_login;
 
     @FXML
     private Button button_register;
@@ -24,7 +25,19 @@ public class LoginController {
     private Label label_status;
 
     @FXML
+    private Label label_status_password;
+
+    @FXML
+    private Label label_status_username;
+
+    @FXML
+    private Label label_status_verify_password;
+
+    @FXML
     private PasswordField passwordfield_password;
+
+    @FXML
+    private PasswordField passwordfield_verify_password;
 
     @FXML
     private TextField textfield_password;
@@ -33,23 +46,23 @@ public class LoginController {
     private TextField textfield_username;
 
     @FXML
-    void button_login_action(ActionEvent event) {
+    void button_back_to_login_action(ActionEvent event) {
+
+        try {
+
+            Stage stage = (Stage) button_back_to_login.getScene().getWindow();
+
+            Scene scene = FXMLLoader.load(getClass().getResource("LoginView.fxml"));
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (Exception e) {
+        }
 
     }
 
     @FXML
     void button_register_action(ActionEvent event) {
-
-        try {
-
-            Stage stage = (Stage) button_register.getScene().getWindow();
-
-            Scene scene = FXMLLoader.load(getClass().getResource("RegisterView.fxml"));
-            stage.setScene(scene);
-            stage.show();
-        } catch (Exception e) {
-            // TODO: handle exception
-        }
 
     }
 
@@ -57,18 +70,37 @@ public class LoginController {
     void checkbox_show_password_action(ActionEvent event) {
 
         if (checkbox_show_password.isSelected()) {
+
             String password = passwordfield_password.getText();
             textfield_password.setText(password);
 
             passwordfield_password.setVisible(false);
             textfield_password.setVisible(true);
+
         } else {
+
             String password = textfield_password.getText();
             passwordfield_password.setText(password);
 
-            textfield_password.setVisible(false);
             passwordfield_password.setVisible(true);
+            textfield_password.setVisible(false);
+
         }
+
+    }
+
+    @FXML
+    void passwordfield_password_action(KeyEvent event) {
+
+    }
+
+    @FXML
+    void passwordfield_verify_password(KeyEvent event) {
+
+    }
+
+    @FXML
+    void textfield_password_action(KeyEvent event) {
 
     }
 

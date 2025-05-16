@@ -1,10 +1,13 @@
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 public class LoginController {
 
@@ -37,6 +40,15 @@ public class LoginController {
     @FXML
     void button_register_action(ActionEvent event) {
 
+        try {
+            Stage stage = (Stage) button_register.getScene().getWindow();
+            Scene scene = FXMLLoader.load(getClass().getResource("RegisterView.fxml"));
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+
     }
 
     @FXML
@@ -55,7 +67,6 @@ public class LoginController {
 
             passwordfield_password.setVisible(true);
             textfield_password.setVisible(false);
-
         }
 
     }
