@@ -11,7 +11,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
-import utility.Register_v2;
+import my_class.Register_v2;
 
 public class RegisterController {
 
@@ -28,6 +28,9 @@ public class RegisterController {
 
     @FXML
     private Label label_status_password;
+
+    @FXML
+    private Label label_status;
 
     @FXML
     private Label label_status_username;
@@ -74,6 +77,7 @@ public class RegisterController {
         if (register_v2.validateUsername(username) && register_v2.validatePassword(password)) {
             register_v2.register(username, password);
             System.out.println("User registered successfully");
+
         } else {
             System.out.println("Invalid username or password");
 

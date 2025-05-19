@@ -1,6 +1,12 @@
-package my_objects;
+package my_class;
 
 import my_abstract.CredentialAbstract;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Arrays;
 
 public class Credential_v1 extends CredentialAbstract {
 
@@ -10,14 +16,14 @@ public class Credential_v1 extends CredentialAbstract {
     @Override
     public void loadCredentials(String filePath) {
         database = filePath;
-        try (java.io.BufferedReader br = new java.io.BufferedReader(new java.io.FileReader(filePath))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             java.util.List<String[]> tempCredentials = new java.util.ArrayList<>();
             String line;
             while ((line = br.readLine()) != null) {
                 tempCredentials.add(line.split(","));
             }
             credentials = tempCredentials.toArray(new String[0][]);
-        } catch (java.io.IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -34,10 +40,10 @@ public class Credential_v1 extends CredentialAbstract {
 
     @Override
     public void setCredentials(String username, String password) {
-        try (java.io.BufferedWriter bw = new java.io.BufferedWriter(new java.io.FileWriter(database, true))) {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(database, true))) {
             bw.write(username + "," + password);
             bw.newLine();
-        } catch (java.io.IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -47,6 +53,8 @@ public class Credential_v1 extends CredentialAbstract {
         Credential_v1 encapsulation = new Credential_v1();
 
         encapsulation.loadCredentials("../credentials.csv");
+
+        System.out.println(Arrays.deepToString(encapsulation.credentials));
 
         encapsulation.setCredentials("admin000", "admin000");
 

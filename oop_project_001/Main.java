@@ -11,10 +11,9 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Scene scene = FXMLLoader.load(getClass().getResource("./LoginView.fxml"));
-        // Scene scene = FXMLLoader.load(getClass().getResource("./RegisterView.fxml"));
-        // Scene scene =
         // FXMLLoader.load(getClass().getResource("./ApplicationView.fxml"));
+        // Scene scene = FXMLLoader.load(getClass().getResource("./LoginView.fxml"));
+        Scene scene = FXMLLoader.load(getClass().getResource("./RegisterView.fxml"));
         stage.setTitle("Project Login/Register");
         stage.getIcons().add(new Image(getClass().getResourceAsStream("itc_logo.png")));
         stage.setScene(scene);

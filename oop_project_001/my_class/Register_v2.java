@@ -1,4 +1,4 @@
-package my_objects;
+package my_class;
 
 public class Register_v2 extends Register_v1 {
 

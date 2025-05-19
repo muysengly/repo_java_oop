@@ -9,6 +9,7 @@ public class Cat {
     public Cat() {
         // Initialize name to "Unknown"
         this.name = "Mew Mew";
+
         // Initialize age to 0
         this.age = 1;
     }

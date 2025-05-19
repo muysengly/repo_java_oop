@@ -1,4 +1,4 @@
-package my_objects;
+package my_class;
 
 import my_abstract.LoginAbstract;
 
