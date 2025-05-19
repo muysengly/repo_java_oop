@@ -1,6 +1,7 @@
 package my_class;
 
 import my_abstract.CredentialAbstract;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
