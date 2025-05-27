@@ -6,23 +6,24 @@ import java.util.List;
 
 public class DatabaseManagement {
 
-    private String path_csv;
+    private String path_CSV;
     private String[][] credential;
 
     public DatabaseManagement() {
-        System.out.println("class is constructed");
+        System.out.println("Class is constructed!");
     }
 
     public void loadDB(String path) {
-        path_csv = path;
-        // System.out.println(path_csv);
+        path_CSV = path;
+        System.out.println(path_CSV);
     }
 
     public String[][] getDB() {
 
         try {
 
-            List<String> lines = Files.readAllLines(Paths.get(path_csv));
+            List<String> lines = Files.readAllLines(Paths.get(path_CSV));
+            // System.out.println(lines);
 
             credential = new String[lines.size()][];
             for (String line : lines) {
@@ -35,7 +36,7 @@ public class DatabaseManagement {
         return credential;
     }
 
-    public void setDB(String username, String password) {
+    void setDB(String username, String password) {
 
     }
 

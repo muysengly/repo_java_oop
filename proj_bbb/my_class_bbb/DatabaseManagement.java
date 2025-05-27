@@ -1,8 +1,9 @@
-package my_class;
+package my_class_bbb;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.Arrays;
 import java.util.List;
 
 public class DatabaseManagement {
@@ -10,7 +11,7 @@ public class DatabaseManagement {
     private String path_csv;
     private String[][] credential;
 
-    DatabaseManagement() {
+    public DatabaseManagement() {
         System.out.println("Object is constructed!");
     }
 
@@ -39,18 +40,16 @@ public class DatabaseManagement {
 
     public void setDatabase(String username, String password) {
 
-    }
+        try {
 
-    // This is a placeholder for testing the DatabaseManagement class.
-    public static void main(String[] args) {
+            FileWriter file_writer = new FileWriter(path_csv, true);
+            BufferedWriter buffer_writer = new BufferedWriter(file_writer);
+            buffer_writer.write(username + "," + password);
+            buffer_writer.newLine();
+            buffer_writer.flush();
 
-        DatabaseManagement database_management = new DatabaseManagement();
-
-        database_management.loadDatabase("../database.csv");
-
-        String[][] credential = database_management.getDatabase();
-
-        System.out.println("Credential: " + Arrays.deepToString(credential));
+        } catch (Exception e) {
+        }
 
     }
 
