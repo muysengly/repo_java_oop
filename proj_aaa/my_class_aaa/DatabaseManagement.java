@@ -1,5 +1,7 @@
-package my_class;
+package my_class_aaa;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
@@ -19,12 +21,9 @@ public class DatabaseManagement {
     }
 
     public String[][] getDB() {
-
         try {
-
             List<String> lines = Files.readAllLines(Paths.get(path_CSV));
             // System.out.println(lines);
-
             credential = new String[lines.size()][];
             for (String line : lines) {
                 credential[lines.indexOf(line)] = line.split(",");
@@ -36,7 +35,20 @@ public class DatabaseManagement {
         return credential;
     }
 
-    void setDB(String username, String password) {
+    public void setDB(String username, String password) {
+        try {
+
+            FileWriter fw = new FileWriter(path_CSV, true);
+            BufferedWriter bf = new BufferedWriter(fw);
+
+            bf.write(username + "," + password);
+            bf.newLine();
+
+            bf.flush();
+
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
 
     }
 
