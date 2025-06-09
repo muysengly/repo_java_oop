@@ -1,11 +1,11 @@
 package my_class_bbb;
 
-public class Register {
+public class _Register {
 
     StringValidation_V2 sv;
     DatabaseManagement db;
 
-    public Register() {
+    public _Register() {
         sv = new StringValidation_V2();
 
         db = new DatabaseManagement();

@@ -19,3 +19,6 @@ __renamer__.ipynb
 __readme__.ipynb
 
 dir_001_book/dir_004_exam/
+
+# ignore files starting with _
+**/_*
