@@ -10,6 +10,8 @@ lib/
 __resource__/
 __backup__/
 __tmp__/
+__setup__/
+
 
 # ignore files
 __renamer.ipynb

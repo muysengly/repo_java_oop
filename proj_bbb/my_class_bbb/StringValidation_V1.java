@@ -12,6 +12,8 @@ public class StringValidation_V1 {
         db.loadDatabase("database.csv");
         String[][] credentials = db.getDatabase();
 
+        System.out.println(Arrays.deepToString(credentials));
+
         usernames = new String[credentials.length];
         for (int i = 0; i < credentials.length; i++) {
             usernames[i] = credentials[i][0];
