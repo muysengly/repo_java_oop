@@ -9,8 +9,12 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
+import my_class_bbb.Register;
+import my_class_bbb._Register;
 
 public class RegisterController {
+
+    Register register = new Register();
 
     @FXML
     private Button button_back_to_login;
@@ -63,11 +67,6 @@ public class RegisterController {
     }
 
     @FXML
-    void button_register_action(ActionEvent event) {
-
-    }
-
-    @FXML
     void checkbox_show_password(ActionEvent event) {
 
         if (checkbox_show_password.isSelected()) {
@@ -91,22 +90,101 @@ public class RegisterController {
     }
 
     @FXML
-    void passwordfield_password_action(KeyEvent event) {
+    void button_register_action(ActionEvent event) {
 
+        String username = textfield_username.getText();
+
+        String password;
+        if (checkbox_show_password.isSelected()) {
+            password = textfield_password.getText();
+        } else {
+            password = passwordfield_password.getText();
+        }
+
+        String verify_password = passwordfield_verify_password.getText();
+
+        if (verify_password.equals(password)) {
+            boolean success = register.isRegisterSuccess(username, password);
+            if (success) {
+                label_status.setText("Register Success!");
+                label_status.setStyle("-fx-text-fill: green");
+            } else {
+                label_status.setText("Register Fail!");
+                label_status.setStyle("-fx-text-fill: red");
+            }
+        } else {
+            label_status.setText("Register Fail!");
+            label_status.setStyle("-fx-text-fill: red");
+        }
+
+    }
+
+    @FXML
+    void passwordfield_password_action(KeyEvent event) {
+        if (!checkbox_show_password.isSelected()) {
+            String password = passwordfield_password.getText();
+
+            if (register.isPasswordValid(password)) {
+                label_status_password.setText("Password is valid!");
+                label_status_password.setStyle("-fx-text-fill: green");
+            } else {
+                label_status_password.setText("Password invalid!");
+                label_status_password.setStyle("-fx-text-fill: red");
+            }
+
+        }
+    }
+
+    @FXML
+    void textfield_password_action(KeyEvent event) {
+        if (checkbox_show_password.isSelected()) {
+            String password = textfield_password.getText();
+
+            if (register.isPasswordValid(password)) {
+                label_status_password.setText("Password is valid!");
+                label_status_password.setStyle("-fx-text-fill: green");
+            } else {
+                label_status_password.setText("Password invalid!");
+                label_status_password.setStyle("-fx-text-fill: red");
+            }
+
+        }
     }
 
     @FXML
     void passwordfield_verify_password_action(KeyEvent event) {
 
-    }
+        String password;
+        if (checkbox_show_password.isSelected()) {
+            password = textfield_password.getText();
+        } else {
+            password = passwordfield_password.getText();
+        }
 
-    @FXML
-    void textfield_password_action(KeyEvent event) {
+        String verify_password = passwordfield_verify_password.getText();
+
+        if (verify_password.equals(password)) {
+            label_status_verify_password.setText("Password the same!");
+            label_status_verify_password.setStyle("-fx-text-fill: green");
+        } else {
+            label_status_verify_password.setText("Password isn't the same!");
+            label_status_verify_password.setStyle("-fx-text-fill: red");
+        }
 
     }
 
     @FXML
     void textfield_username_action(KeyEvent event) {
+
+        String username = textfield_username.getText();
+
+        if (register.isUserNameValid(username)) {
+            label_status_username.setText("Username is valid!");
+            label_status_username.setStyle("-fx-text-fill: green");
+        } else {
+            label_status_username.setText("Username invalid!");
+            label_status_username.setStyle("-fx-text-fill: red");
+        }
 
     }
 
