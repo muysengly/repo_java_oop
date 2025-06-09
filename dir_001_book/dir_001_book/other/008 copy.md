@@ -9,7 +9,7 @@ paginate: true
 math: mathjax
 ---
 
-<img src="images/itc_logo.png" alt="01_01" width=20% />
+<img src="itc_logo.png" alt="01_01" width=20% />
 
 # Chapter 8: Multi-Dimensional Array
 
