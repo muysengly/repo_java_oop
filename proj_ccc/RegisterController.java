@@ -9,6 +9,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
+import my_class_ccc.Register;
 
 public class RegisterController {
 
@@ -62,11 +63,6 @@ public class RegisterController {
     }
 
     @FXML
-    void button_register_action(ActionEvent event) {
-
-    }
-
-    @FXML
     void checkbox_show_password_action(ActionEvent event) {
 
         if (checkbox_show_password.isSelected()) {
@@ -92,16 +88,100 @@ public class RegisterController {
     @FXML
     void passwordfield_password_action(KeyEvent event) {
 
-    }
+        if (!checkbox_show_password.isSelected()) {
 
-    @FXML
-    void passwordfield_verify_password(KeyEvent event) {
+            String password = passwordfield_password.getText();
+
+            if (rg.isPasswordValid(password)) {
+                label_status_password.setText("Password is valid!");
+                label_status_password.setStyle("-fx-text-fill: green");
+            } else {
+                label_status_password.setText("Password invalid!");
+                label_status_password.setStyle("-fx-text-fill: red");
+            }
+
+        }
 
     }
 
     @FXML
     void textfield_password_action(KeyEvent event) {
+        if (checkbox_show_password.isSelected()) {
 
+            String password = textfield_password.getText();
+
+            if (rg.isPasswordValid(password)) {
+                label_status_password.setText("Password is valid!");
+                label_status_password.setStyle("-fx-text-fill: green");
+            } else {
+                label_status_password.setText("Password invalid!");
+                label_status_password.setStyle("-fx-text-fill: red");
+            }
+
+        }
+    }
+
+    Register rg = new Register();
+
+    @FXML
+    void textfield_username_action(KeyEvent event) {
+
+        String username = textfield_username.getText();
+
+        if (rg.isUserNameValid(username)) {
+            label_status_username.setText("Username is valid!");
+            label_status_username.setStyle("-fx-text-fill: green");
+        } else {
+            label_status_username.setText("Username invalid!");
+            label_status_username.setStyle("-fx-text-fill: red");
+        }
+    }
+
+    @FXML
+    void passwordfield_verify_password(KeyEvent event) {
+
+        String password;
+        if (checkbox_show_password.isSelected()) {
+            password = textfield_password.getText();
+        } else {
+            password = passwordfield_password.getText();
+        }
+
+        String verify_password = passwordfield_verify_password.getText();
+
+        if (password.equals(verify_password)) {
+            label_status_verify_password.setText("Password is the same!");
+            label_status_verify_password.setStyle("-fx-text-fill: green");
+        } else {
+            label_status_verify_password.setText("Password isn't the same!");
+            label_status_verify_password.setStyle("-fx-text-fill: red");
+        }
+
+    }
+
+    @FXML
+    void button_register_action(ActionEvent event) {
+
+        rg = new Register();
+
+        String username = textfield_username.getText();
+
+        String password;
+        if (checkbox_show_password.isSelected()) {
+            password = textfield_password.getText();
+        } else {
+            password = passwordfield_password.getText();
+        }
+
+        String verify_password = passwordfield_verify_password.getText();
+
+        if (rg.isRegisterSuccess(username, password, verify_password)) {
+            label_status.setText("Register Success!!!");
+            label_status.setStyle("-fx-text-fill: green");
+        } else {
+            label_status.setText("Register Fail!!!");
+            label_status.setStyle("-fx-text-fill: red");
+        }
     }
 
 }

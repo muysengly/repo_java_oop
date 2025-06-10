@@ -13,7 +13,7 @@
 <Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RegisterController">
     <AnchorPane prefHeight="400.0" prefWidth="600.0">
       <children>
-         <TextField fx:id="textfield_username" layoutX="226.0" layoutY="122.0" />
+         <TextField fx:id="textfield_username" layoutX="226.0" layoutY="122.0" onKeyTyped="#textfield_username_action" />
          <PasswordField fx:id="passwordfield_verify_password" layoutX="217.0" layoutY="279.0" onKeyTyped="#passwordfield_verify_password" prefHeight="25.0" prefWidth="161.0" />
          <CheckBox fx:id="checkbox_show_password" layoutX="397.0" layoutY="190.0" mnemonicParsing="false" onAction="#checkbox_show_password_action" text="Show" />
          <Button fx:id="button_register" layoutX="273.0" layoutY="363.0" mnemonicParsing="false" onAction="#button_register_action" text="Register" />

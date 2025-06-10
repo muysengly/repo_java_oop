@@ -12,7 +12,7 @@ public class DatabaseManagement {
     private String[][] credential;
 
     public DatabaseManagement() {
-        System.out.println("class is constructed");
+        // System.out.println("class is constructed");
     }
 
     public void loadDB(String path) {
