@@ -1,12 +1,14 @@
 import java.util.Arrays;
 
-import my_class_aaa.DatabaseManagement;
-import my_class_aaa.StringValidation_V1;
+import my_class_aaa.LogIn;
+import my_class_aaa.StringValidation_V2;
 
 public class Test {
     public static void main(String[] args) {
 
-        System.out.println(new StringValidation_V1().isStringLesser("123456", 10));
+        LogIn lg = new LogIn();
+
+        System.out.println(lg.isLogInSuccess("admin", "admin"));
 
     }
 }

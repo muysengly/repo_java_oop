@@ -8,6 +8,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import my_class_aaa.LogIn;
 
 public class LoginController {
 
@@ -48,8 +49,39 @@ public class LoginController {
 
     }
 
+    LogIn lg = new LogIn();
+
     @FXML
     void button_login_action(ActionEvent event) {
+
+        String username = textfield_username.getText();
+        String password;
+        if (checkbox_show_password.isSelected()) {
+            password = textfield_password.getText();
+        } else {
+            password = passwordfield_password.getText();
+        }
+
+        if (lg.isLogInSuccess(username, password)) {
+
+            try {
+
+                Stage stage = (Stage) button_login.getScene().getWindow();
+                Scene scene = FXMLLoader.load(getClass().getResource("ApplicationView.fxml"));
+
+                stage.setScene(scene);
+                stage.show();
+
+            } catch (Exception e) {
+                // TODO: handle exception
+            }
+
+        } else {
+
+            label_status.setText("Login Fail!");
+            label_status.setStyle("-fx-text-fill: red");
+
+        }
 
     }
 
