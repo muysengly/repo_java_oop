@@ -12,12 +12,12 @@ public class DatabaseManagement {
     private String[][] credential;
 
     public DatabaseManagement() {
-        System.out.println("Class is constructed!");
+        // System.out.println("Class is constructed!");
     }
 
     public void loadDB(String path) {
         path_CSV = path;
-        System.out.println(path_CSV);
+        // System.out.println(path_CSV);
     }
 
     public String[][] getDB() {

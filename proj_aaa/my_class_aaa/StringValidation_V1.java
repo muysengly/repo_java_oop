@@ -17,7 +17,7 @@ public class StringValidation_V1 {
             usernames[i] = credential[i][0];
         }
 
-        System.out.println(Arrays.deepToString(usernames));
+        // System.out.println(Arrays.deepToString(usernames));
 
     }
 
