@@ -12,14 +12,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root type="Scene"
-    xmlns="http://javafx.com/javafx/23.0.1"
-    xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+<Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginController">
     <AnchorPane prefHeight="306.0" prefWidth="458.0">
         <children>
             <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                 <image>
-                    <Image url="@../../asset/itc_logo.png" />
+                    <Image url="@itc_logo.png" />
                 </image>
             </ImageView>
             <Label layoutX="174.0" layoutY="49.0" text="Project OOP">
@@ -42,9 +40,9 @@
                 </children>
             </Group>
             <CheckBox fx:id="checkbox_show_password" layoutX="319.0" layoutY="200.0" mnemonicParsing="false" onAction="#checkbox_show_password_action" text="Show" />
-            <Label fx:id="label_status" layoutX="14.0" layoutY="276.0" prefHeight="20.0" prefWidth="200.0" text="Status" />
+            <Label fx:id="label_status" layoutX="14.0" layoutY="276.0" prefHeight="20.0" prefWidth="200.0" />
             <Button fx:id="button_login" layoutX="206.0" layoutY="235.0" mnemonicParsing="false" onAction="#button_login_action" text="Login" />
             <Button fx:id="button_goto_register" layoutX="345.0" layoutY="273.0" mnemonicParsing="false" onAction="#button_goto_register_action" text="Goto Register &gt;" />
         </children>
     </AnchorPane>
-</fx:root>
+</Scene>

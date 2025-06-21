@@ -1,4 +1,4 @@
-package my_class_aaa;
+package my_class;
 
 import java.util.Arrays;
 

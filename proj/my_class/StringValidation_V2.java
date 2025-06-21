@@ -1,4 +1,4 @@
-package my_class_aaa;
+package my_class;
 
 import my_class.StringValidation_V1;
 
