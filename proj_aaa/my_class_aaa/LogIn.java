@@ -2,7 +2,7 @@ package my_class_aaa;
 
 import java.util.Arrays;
 
-import my_class.DatabaseManagement;
+import my_class_aaa.DatabaseManagement;
 
 public class LogIn {
 

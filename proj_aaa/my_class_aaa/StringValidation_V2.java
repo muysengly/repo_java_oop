@@ -1,6 +1,6 @@
 package my_class_aaa;
 
-import my_class.StringValidation_V1;
+import my_class_aaa.StringValidation_V1;
 
 public class StringValidation_V2 extends StringValidation_V1 {
 

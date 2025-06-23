@@ -2,8 +2,8 @@ package my_class_aaa;
 
 import java.util.Arrays;
 
-import my_class.DatabaseManagement;
-import my_class.StringValidation_V2;
+import my_class_aaa.DatabaseManagement;
+import my_class_aaa.StringValidation_V2;
 
 public class Register {
 
